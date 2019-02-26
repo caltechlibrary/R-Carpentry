@@ -1,0 +1,13 @@
+output_dir: "_site"
+exclude: ["portal-database.sqlite", "DESCRIPTION", "Makefile"]
+include: ["code-handout.R"]
+output:
+  html_document:
+    highlight: pygments
+    toc: true
+    toc_float:
+      collapsed: false
+    include:
+      in_header: header.html
+      after_body: footer.html
+    css: style.css
