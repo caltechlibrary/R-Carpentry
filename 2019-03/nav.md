@@ -1,5 +1,5 @@
 
-+ [Lesson](.)
-+ [Topic 1](00-getting-started.html)
-+ [Topic 2](01-working-with-openrefine.html)
-+ [Contact Us](mailto:authorcarpentry@library.caltech.edu)
++ [Lesson Home](index.html)
++ [Topic 1](01-getting-started.html)
+* [Repository](.)
++ [Contact](mailto:dtwrub@caltech.edu)
