@@ -28,7 +28,11 @@ class will be appropriate for you, please look over the lesson content above, or
 3. Understanding Data Types
 4. Working with Vectors
 
-Links to Cheat Sheets - coming soon!
+Cheat Sheets:
+
+[RStudio](https://www.rstudio.com/resources/cheatsheets/#ide)
+
+[Base R](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf)
 
 ### Day 2 (March 12, 9am - 12pm)
 
@@ -36,7 +40,9 @@ Links to Cheat Sheets - coming soon!
 2. Working with Factors
 3. Formatting Dates
 
-Links to Cheat Sheets - coming soon!
+Cheat Sheets:
+
+[Dates and Times - the lubridate package](https://www.rstudio.com/resources/cheatsheets/#lubridate)
 
 ### Day 3 (March 18, 9am - 12pm)
 
