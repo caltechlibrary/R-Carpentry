@@ -1,3 +1,2 @@
 + [Lesson Home](index.html)
-+ [Repository](.)
-+ [Contact](mailto:dtwrub@caltech.edu)
++ [Why R?](why_r.html)
