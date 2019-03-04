@@ -1,6 +1,7 @@
 ---
-title: Introduction to R
-author: Data Carpentry contributors
+title: "Introduction to R"
+author: "Data Carpentry contributors"
+output: pdf_document
 minutes: 45
 ---
 
@@ -34,7 +35,7 @@ source("setup.R")
 
 You can get output from R simply by typing math in the console:
 
-```{r, purl=FALSE}
+```{r, echo=TRUE, eval=TRUE, purl=TRUE}
 3 + 5
 12 / 7
 ```
@@ -576,7 +577,3 @@ Recall that you can use the `typeof()` function to find the type of your atomic 
 Now that we have learned how to write scripts, and the basics of R's data
 structures, we are ready to start working with the Portal dataset we have been
 using in the other lessons, and learn about data frames.
-
-
-```{r, child="_page_built_on.Rmd"}
-```
