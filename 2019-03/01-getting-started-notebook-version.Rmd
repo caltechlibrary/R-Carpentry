@@ -209,9 +209,7 @@ are only going to use one file and it will make things easier.
 
 Your working directory should now look like this:
 
-```{r, results='markup',fig.cap="How it should look like at the beginning of this lesson", echo=FALSE, purl=FALSE, out.width='100%', fig.align='center'}
-knitr::include_graphics("img/r-starting-how-it-should-look-like.png")
-```
+![Starting directory structure in RStudio.](img/r-starting-how-it-should-look-like.png)
 
 ### The working directory
 
