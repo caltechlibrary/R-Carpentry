@@ -1,0 +1,21 @@
+---
+title: "Setup Instructions"
+output: html_notebook
+---
+
+Please make sure you are connected to the internet before starting these steps.
+
+1. Download name.zip file to a known location/folder on your computer.
+
+2. Unzip the file in that directory.
+
+3. You should now have a directory called name, with the following directory structure:
+  * Rmd files
+  * img/
+  * data/
+  * and?
+
+4. In RStudio, open the setup.R file.
+
+5. Click the green Run -> button at the top (image?)
+
