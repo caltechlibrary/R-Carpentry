@@ -1,19 +1,12 @@
 ---
 title: Data visualization with ggplot2
 author: Data Carpentry contributors
-minutes: 60
+output: html_notebook
 ---
 
-
 ```{r setup, echo=FALSE, purl=FALSE}
-source("setup.R")
 surveys_complete <- read_csv(file = "data_output/surveys_complete.csv", col_types = cols())
 ```
-
-```{r, echo=FALSE, purl=TRUE}
-### Data Visualization with ggplot2
-```
-
 
 ------------
 
@@ -34,7 +27,6 @@ library(tidyverse)
 ```
 
 If not still in the workspace, load the data we saved in the previous lesson.
-
 
 ```{r load-data, eval=FALSE, purl=FALSE}
 surveys_complete <- read_csv("data_output/surveys_complete.csv")
@@ -602,7 +594,4 @@ Note: The parameters `width` and `height` also determine the font size in the sa
 ##  exercise or create a beautiful graph of your own. Use the RStudio
 ##  ggplot2 cheat sheet for inspiration:
 ##  https://www.rstudio.com/wp-content/uploads/2015/08/ggplot2-cheatsheet.pdf
-```
-
-```{r, child="_page_built_on.Rmd"}
 ```
