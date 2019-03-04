@@ -19,3 +19,10 @@ Please make sure you are connected to the internet before starting these steps.
 
 5. Click the green Run -> button at the top (image?)
 
+# Day of instruction:
+
+1. File -> Open -> 01-getting-started-notebook-version.Rmd
+
+2. Click Preview
+
+3. Show how to open up in a separate window if desired
