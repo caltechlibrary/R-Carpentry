@@ -1,6 +1,6 @@
 ---
 title: "Getting Started: R and RStudio"
-author: "Data Carpentry contributors"
+author: "Data Carpentry contributors; Gail Clement; Donna Wrublewski*"
 output: html_notebook
 minutes: 15
 ---
@@ -63,42 +63,55 @@ while developing in R, RStudio will make typing easier and less error-prone.
 
 ------------
 
-## Getting set up
-
-It is good practice to keep a set of related data, analyses, and text
-self-contained in a single folder, called the **working directory**. All of the
-scripts within this folder can then use *relative paths* to files that indicate
-where inside the project a file is located (as opposed to absolute paths, which
-point to where a file is on a specific computer). Working this way makes it
-a lot easier to move your project around on your computer and share it with
-others without worrying about whether or not the underlying scripts will still
-work.
-
-RStudio provides a helpful set of tools to do this through its "Projects"
-interface, which not only creates a working directory for you, but also remembers
-its location (allowing you to quickly navigate to it) and optionally preserves
-custom settings and open files to make it easier to resume work after a
-break. Go through the steps for creating an "R Project" for this
-tutorial below.
-
-1. Start RStudio.
-2. Under the `File` menu, click on `New Project`. Choose `New Directory`, then
-  `New Project`.
-3. Enter a name for this new folder (or "directory"), and choose a convenient
-  location for it. This will be your **working directory** for the rest of the
-  day (e.g., `~/data-carpentry`).
-4. Click on `Create Project`.
-5. Download the [code handout](./code-handout.R), place it in your working
-  directory and rename it (e.g., `data-carpentry-script.R`).
-6. (Optional) Set Preferences to 'Never' save workspace in RStudio.
+## Getting set up: Global Options
 
 RStudio's default preferences generally work well, but saving a workspace to
 .RData can be cumbersome, especially if you are working with larger datasets.
 To turn that off, go to Tools --> 'Global Options' and select the 'Never' option
 for 'Save workspace to .RData' on exit.'
 
+
+
 ![Set 'Save workspace to .RData on exit' to 'Never'](img/rstudio-preferences.png)
 ### Organizing your working directory
+
+
+## Getting set up: Creating the Project
+
+It is good practice to keep a set of related data, analyses, and text
+self-contained in a single project folder in RStudio. Working this way makes it
+a lot easier to move your project around on your computer and share it with
+others without worrying about whether or not the underlying scripts will still
+work.
+
+RStudio provides a helpful set of tools to set up a project through its "Projects"
+interface, which not only creates a working directory for you, but also remembers
+its location (allowing you to quickly navigate to it) and optionally preserves
+custom settings and open files to make it easier to resume work after a
+break. Go through the steps for creating an "R Project" for this tutorial below.
+
+1. Start RStudio.
+2. Under the `File` menu, click on `New Project`. Choose `Existing Directory`, then
+  browse through your local files to select the folder created for your workshop download.
+3. Click on `Create Project`. Note that an `.Rproj` file is automatically added to the project folder. This file marks the location of your project's working directory.
+
+### The working directory
+
+The working directory is an important concept to understand. It is the place
+from where R will be looking for and saving the files. When you write code for
+your project, it should refer to files in relation to the root of your working
+directory and only need files within this structure. As mentioned before, the .Rproj file created when you first created the project is located in the working directory.
+RStudio will now set your **working directory** as the folder where your xxx.Rproj file lives. To verify the location of your working directly, type the following in your console:
+
+`getwd()`
+
+The returned string will be the absolute path to your project, such as `C:/Users/RFeynman/Projects/R-Carpentry` 
+
+In the fictional example above, the name of the project file would be `R-Carpentry.Rproj`
+
+## Getting set up: File organization for your Future Self (and Others, too!)
+
+During this workshop you will be creating subfolders and you will add files to those subfolders. Note that they will be stored in levels below the working directory and their file paths will be relative to the location of the working directory. In that way, the entire project is structured to be portable -- if you move the project to another location on your computer, or to another computer,  RStudio will treat the project with integrity: it will recognize the .Rproj file; set the working directory to that same location; and accurately follow the structure of the subfolders and their files. 
 
 Using a consistent folder structure across your projects will help keep things
 organized, and will also make it easy to find/file things in the future. This
@@ -143,21 +156,7 @@ Your working directory should now look like this:
 
 ![Starting directory structure in RStudio.](img/r-starting-how-it-should-look-like.png)
 
-### The working directory
 
-The working directory is an important concept to understand. It is the place
-from where R will be looking for and saving the files. When you write code for
-your project, it should refer to files in relation to the root of your working
-directory and only need files within this structure.
-
-Using RStudio projects makes this easy and ensures that your working directory
-is set properly. If you need to check it, you can use `getwd()`. If for some
-reason your working directory is not what it should be, you can change it in the
-RStudio interface by navigating in the file browser where your working directory
-should be, and clicking on the blue gear icon "More", and select "Set As Working
-Directory". Alternatively you can use `setwd("/path/to/working/directory")` to
-reset your working directory. However, your scripts should not include this line
-because it will fail on someone else's computer.
 
 ------------
 
