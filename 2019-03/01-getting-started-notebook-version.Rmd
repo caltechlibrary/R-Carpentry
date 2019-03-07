@@ -1,7 +1,10 @@
 ---
 title: "Getting Started: R and RStudio"
 author: "Data Carpentry contributors; Gail Clement; Donna Wrublewski*"
-output: html_notebook
+output:
+  html_notebook:
+    theme: united
+    toc: yes
 minutes: 15
 ---
 
