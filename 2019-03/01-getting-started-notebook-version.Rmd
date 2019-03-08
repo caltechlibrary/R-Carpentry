@@ -117,8 +117,9 @@ During this workshop you will be creating subfolders and you will add files to t
 
 Using a consistent folder structure across your projects will help keep things
 organized, and will also make it easy to find/file things in the future. This
-can be especially helpful when you have multiple projects. In general, you may
-create directories (folders) for **scripts**, **data**, and **documents**.
+can be especially helpful when you have multiple projects. In general, one 
+recommended structure would include directories (folders) for **scripts**, 
+**data**, and **documents**.
 
  - **`data/`** Use this folder to store your raw data and intermediate
    datasets you may create for the need of a particular analysis. For the sake
