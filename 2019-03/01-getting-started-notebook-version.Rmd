@@ -6,6 +6,7 @@ output:
     theme: united
     toc: yes
 minutes: 15
+date: March 8, 2019
 ---
 
 ------------
@@ -159,14 +160,12 @@ and create a folder named `documents` within your newly created working director
 (e.g., `~/carpentry-workshop/documents`). 
 * Method 2: Type `dir.create("documents")` at your R console.
 
-We are going to keep the script in the root of our working directory because we
+We are going to keep the scripts in the root of our working directory because we
 are only going to use one file and it will make things easier.
 
 Your working directory should now look like this:
 
-![Starting directory structure in RStudio.](img/r-starting-how-it-should-look-like.png)
-
-
+![Starting directory structure in RStudio.](img/r-project-setup.jpg)
 
 ------------
 
@@ -191,6 +190,10 @@ Because we want our code and workflow to be reproducible, it is better to type
 the commands we want in the script editor, and save the script. This way, there
 is a complete record of what we did, and anyone (including our future selves!)
 can easily replicate the results on their computer.
+
+Note: In RStudio, the History tab will record all console entries until it is cleared. If 
+you forget to use a script, or decide to use one later, you can export lines from the 
+History to either the Console, or to a file.
 
 RStudio allows you to execute commands directly from the script editor by using
 the <kbd>`Ctrl`</kbd> + <kbd>`Enter`</kbd> shortcut (on Macs, <kbd>`Cmd`</kbd> +
@@ -241,15 +244,11 @@ One of the fastest ways to get help, is to use the RStudio help interface. This 
 
 If you need help with a specific function, let's say `barplot()`, you can type:
 
-```{r, eval=FALSE, purl=FALSE}
-?barplot
-```
+`> ?barplot`
 
 If you just need to remind yourself of the names of the arguments, you can use:
 
-```{r, eval=FALSE, purl=FALSE}
-args(lm)
-```
+`> args(lm)`
 
 ### I want to use a function that does X, there must be a function for it but I don't know which one...
 
@@ -258,9 +257,7 @@ If you are looking for a function to do a particular task, you can use the
 However, this only looks through the installed packages for help pages with a
 match to your search request
 
-```{r, eval=FALSE, purl=FALSE}
-??kruskal
-```
+`> ??krusal`
 
 If you can't find what you are looking for, you can use
 the [rdocumentation.org](http://www.rdocumentation.org) website that searches
