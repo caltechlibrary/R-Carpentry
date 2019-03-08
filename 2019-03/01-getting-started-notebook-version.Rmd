@@ -68,12 +68,15 @@ while developing in R, RStudio will make typing easier and less error-prone.
 
 ## Getting set up: Global Options
 
-RStudio's default preferences generally work well, but saving a workspace to
-.RData can be cumbersome, especially if you are working with larger datasets.
-To turn that off, go to Tools --> 'Global Options' and select the 'Never' option
-for 'Save workspace to .RData' on exit.'
+In R, the *workspace* is the current working environment, which includes all defined 
+objects loaded into R - this includes objects, data, functions, etc. By default, 
+when you exit R, this environment is saved to a file called .RData. Sometimes, 
+saving a workspace can be cumbersome, especially if you are working with 
+larger datasets or a lot of objects. So, let's turn that option to save _off_. 
+In RStudio, go to 'Tools' --> 'Global Options' and select the 'Never' option
+for 'Save workspace to .RData on exit':
 
-![Set 'Save workspace to .RData on exit' to 'Never'](img/rstudio-preferences.png)
+![**Set 'Save workspace to .RData on exit' to 'Never'.**](img/rstudio-preferences.jpg)
 
 ## Getting set up: Creating the Project
 
