@@ -51,7 +51,7 @@ generate. RStudio can also be used for other things (e.g., version control,
 developing packages, writing Shiny apps) that we will not cover during the
 workshop.
 
-![RStudio interface screenshot. Clockwise from top left: Source, Environment/History, Files/Plots/Packages/Help/Viewer, Console.](img/rstudio-screenshot.png)
+![**RStudio interface screenshot. Clockwise from top left: Source, Environment/History, Files/Plots/Packages/Help/Viewer, Console.**](img/rstudio-screenshot.png)
 
 RStudio is divided into 4 "Panes": the **Source** for your scripts and documents
 (top-left, in the default layout), your **Environment/History** (top-right),
@@ -165,7 +165,7 @@ are only going to use one file and it will make things easier.
 
 Your working directory should now look like this:
 
-![Starting directory structure in RStudio.](img/r-project-setup.jpg)
+![**Starting directory structure in RStudio.**](img/r-project-setup.jpg)
 
 ------------
 
@@ -201,6 +201,23 @@ the <kbd>`Ctrl`</kbd> + <kbd>`Enter`</kbd> shortcut (on Macs, <kbd>`Cmd`</kbd> +
 script (indicated by the cursor) or all of the commands in the currently
 selected text will be sent to the console and executed when you press
 <kbd>`Ctrl`</kbd> + <kbd>`Enter`</kbd>. You can find other keyboard shortcuts in this [RStudio cheatsheet about the RStudio IDE](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf).
+
+### Practice With Scripts!
+
+Let's practice with scripts, as well as get our R environment ready for work.
+
+1. From the Files tab (bottom-right pane), double-click the `install_packages.R` file to 
+open it in the File viewer (top left).
+2. This file contains commands to download and install a number of packages we will need 
+throughout our lessons. We could install each package one by one by parsing through the 
+lines and using the shortcut above, or we can run all the commands by clicking the 
+**Source** button in the top right of the file pane. Let's do that.
+3. A whole bunch of packages will now be downloaded and installed into R. **Note: if you get 
+a message asking you to restart R, select Yes.**
+4. Repeat steps 1 through 3 with the file `load_packages.R`.
+
+Scripts are a great way to setup your working environment in terms of making sure any 
+needed packages are installed and loaded prior to starting your analysis!
 
 At some point in your analysis you may want to check the content of a variable
 or the structure of an object, without necessarily keeping a record of it in
