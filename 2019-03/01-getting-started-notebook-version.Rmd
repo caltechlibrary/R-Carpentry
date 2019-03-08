@@ -73,8 +73,6 @@ RStudio's default preferences generally work well, but saving a workspace to
 To turn that off, go to Tools --> 'Global Options' and select the 'Never' option
 for 'Save workspace to .RData' on exit.'
 
-
-
 ![Set 'Save workspace to .RData on exit' to 'Never'](img/rstudio-preferences.png)
 
 ## Getting set up: Creating the Project
@@ -212,15 +210,11 @@ When this happens, and you thought you finished typing your command, click
 inside the console window and press <kbd>`Esc`</kbd>; this will cancel the incomplete
 command and return you to the `>` prompt.
 
-
 ## How to learn more after the workshop?
 
 The material we cover during this workshop will give you an initial taste of how you can use R to analyze data for your own research. However, you will need to learn more to do advanced operations such as cleaning your dataset, using statistical methods, or creating beautiful graphics. The best way to become proficient and efficient at R, as with any other tool, is to use it to address your actual research questions. As a beginner, it can feel daunting to have to write a script from scratch, and given that many people make their code available online, modifying existing code to suit your purpose might make it easier for you to get started.
 
-
-```{r kitten-img, results='markup', echo=FALSE, purl=FALSE, out.width='400px', fig.align='center'}
-knitr::include_graphics("img/kitten-try-things.jpg")
-```
+![How to actually learn programming.](img/kitten-try-things.jpg)
 
 ------------
 

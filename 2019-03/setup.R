@@ -1,8 +1,34 @@
-## file structure should be from zip file
+## The file structure and needed files should be set up from zip file
 
-## knitr options
+# Download needed packages
+
+install.packages("gridExtra") # Download and install gridExtra
+install.packages("hexbin") # Download and install hexbin
+install.packages("tidyverse") # Download and install tidyverse
+install.packages("lubridate")
+install.packages("readr")
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("magrittr")
+install.packages("tidyr")
+install.packages("knitr")
+
+# Load needed packages into R environment
+
+library(gridExtra) # ggplot
+library(hexbin) # ggplot
+library(tidyverse) # lesson 3 onwards
+library(lubridate)
+library(readr)
+library(ggplot2)
+library(dplyr)
+library(magrittr)
+library(tidyr)
 library(knitr)
 library(methods)
+
+## knitr options
+
 suppressPackageStartupMessages(library(tidyverse))
 knitr::opts_chunk$set(results='hide', fig.path='img/R-ecology-',
                       comment = "#>", purl = FALSE, fig.keep='last')
