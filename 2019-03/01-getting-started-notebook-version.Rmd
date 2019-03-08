@@ -76,8 +76,6 @@ for 'Save workspace to .RData' on exit.'
 
 
 ![Set 'Save workspace to .RData on exit' to 'Never'](img/rstudio-preferences.png)
-### Organizing your working directory
-
 
 ## Getting set up: Creating the Project
 
