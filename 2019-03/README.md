@@ -49,7 +49,11 @@ Cheat Sheets:
 1. The Tidyverse - tidyr and dplyr
 2. Plotting with ggplot2
 
-Links to Cheat Sheets - coming soon!
+Cheat Sheets:
+
+[Tidyverse for Beginners](https://datacamp-community-prod.s3.amazonaws.com/e63a8f6b-2aa3-4006-89e0-badc294b179c)
+
+[Data Visualization with ggplot2](https://www.rstudio.com/resources/cheatsheets/#ggplot2)
 
 ### Day 4 (March 19, 9am - 12pm)
 
@@ -120,16 +124,16 @@ You will need a [GitHub](https://github.com) account for the final day to publis
 
 ## Required Files
 
-Coming soon!
-
-<!--
 1. Create a folder somewhere on your computer to store files associated with this workshop.
-2. Please download the following .zip file into the folder to you created in Step 1:
-3. You should now have, within your folder, a new folder entitled XXX, and the following should be in that folder:
-  * data folder
-  * Script file to download and install packages
-  * all Rmd Files
-  * Data file(s)
-  -->
+2. Please download the following .zip file into the folder to you created in Step 1: https://github.com/caltechlibrary/R-Carpentry/tree/master/2019-03/user_downloads
+3. Open/extract the .zip file you downloaded in Step 2.
+4. You should now have, within your folder, a new folder entitled **carpentry-workshop**, and the following should be in that folder:
+  * two files for *01-getting-started-notebook-version*, a .Rmd file and a .nb.html file
+  * a **data/** folder that contains some .csv files
+  * an empty **data_output/** folder
+  * an empty **fig_output/** folder
+  * an **img/** folder, containing images needed by the .Rmd files
+  * two .R *script* files, *install_packages.R* and *load_packages.R*
+5. Additional instructions will be posted here as needed.
 
-#### Page last updated 2019-02-27T09:16:20-08:00
+#### Page last updated 2019-03-10T16:26:57-07:00
