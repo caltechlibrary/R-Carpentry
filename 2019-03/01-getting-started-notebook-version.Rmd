@@ -144,7 +144,7 @@ recommended structure would include directories (folders) for **scripts**,
 You may want additional directories or subdirectories depending on your project
 needs, but these should form the backbone of your working directory.
 
-![**Example of a working directory structure.**](img/working-directory-structure.png)
+![**Example of a working directory structure.**](img/working-directory-structure-rev.png)
 
 For this workshop, we will need a `data/` folder to store our raw data, and we
 will use `data_output/` for when we learn how to export data as CSV files, and
