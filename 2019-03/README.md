@@ -23,10 +23,10 @@ class will be appropriate for you, please look over the lesson content above, or
 
 ### Day 1 (March 11, 9am - 12pm)
 
-1. Introduction to R and RStudio
-2. Working with R Projects and R Markdown Notebooks
-3. Understanding Data Types
-4. Working with Vectors
+1. Introduction to R and RStudio - [Download Online Lesson](https://caltechlibrary.github.io/R-Carpentry/2019-03/01-getting-started-notebook-version.nb.html)
+2. Working with R Projects
+3. Understanding Data Types and Working with Vectors
+4. R Markdown Notebooks
 
 Cheat Sheets:
 

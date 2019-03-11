@@ -1,9 +1,7 @@
 ---
 title: "Notebooks"
-author: "Data Carpentry contributors"
-output:
-  html_document:
-    df_print: paged
+author: "Donna Wrublewski"
+output: html_notebook
 ---
 
 ------------
@@ -17,38 +15,32 @@ output:
 
 ------------
 
-### Download This Notebook
-
-You can download an R Notebook version of this lesson to follow along with 
-[here](https://github.com/caltechlibrary/2018-03-29-R-Workshop/blob/gh-pages/03-R_Notebooks.nb.html.zip).
-
 ### About R Notebooks
 
-This is an [R Markdown Notebook](https://rmarkdown.rstudio.com/r_notebooks.html). When you execute code within the notebook, the 
-results appear beneath the code.
+This is an [R Markdown Notebook](https://rmarkdown.rstudio.com/r_notebooks.html). When you 
+execute code within the notebook, the results appear beneath the code.
 
-We will talk more about R Markdown on Day 2, and all the wonderful things you can do using it to create documents, but today we 
-are going to focus on using R Markdown Notebooks to create reproducible code.
-
-Briefly, R Markdown is a simple way to create documents with formatting by using specific symbols and characters. Programs capable 
-of reading R Markdown can render a nicely formatted document. This is similar to the way that HTML files are text documents with 
-specific tags, which are read by specific programs (web browsers, etc.) that apply those tags to the text, interpret the 
-formatting, apply it to the document, and display it. R Markdown files (and R Notebooks) have the base file extension *.Rmd. An R 
-Notebook will have the line 
-output: html_notebook
-in the header. 
+Briefly, R Markdown is a simple way to create documents with formatting by using specific 
+symbols and characters. Programs capable of reading R Markdown can render a nicely formatted 
+document. This is similar to the way that HTML files are text documents with 
+specific tags, which are read by specific programs (web browsers, etc.) that apply those tags 
+to the text, interpret the formatting, apply it to the document, and display it. R Markdown 
+files (and R Notebooks) have the base file extension *.Rmd. An R 
+Notebook will have the line output: html_notebook in the header. 
 
 R Notebooks have a few extra features over regular R Markdown documents:
 
-* When you execute code in a Notebook, it is done line by line, so it can be easier to check execution for errors. In a regular R 
-Markdown document, code is executed all at once.
+* When you execute code in a Notebook, it is done line by line, so it can be easier to check 
+execution for errors. In a regular R Markdown document, code is executed all at once.
 
-* You can *Preview* your notebook using the *Preview* button - this displays a rendered HTML copy of the contents of the editor, 
-but does not actually run any code. This makes it a bit faster to check your output.
+* You can *Preview* your notebook using the *Preview* button - this displays a rendered HTML 
+copy of the contents of the editor, but does not actually run any code. This makes it a bit
+faster to check your output.
 
-* When you save your notebook, it creates a special *.nb.html file, which is actually a package of the HTML rendering (of the 
-page, with the code sections as separate image files in their own directory) and the Markdown file. This can be shared with 
-others and opened like a regular fine from within RStudio.
+* When you save your notebook, it creates a special *.nb.html file, which is actually a package 
+of the HTML rendering (of the page, with the code sections as separate image files in their own 
+directory) and the Markdown file. This can be shared with others and opened like a regular fine 
+from within RStudio.
 
 
 ### Text Formatting
@@ -105,15 +97,12 @@ or by pressing *Cmd+Option+I*.
 4. Multiply this variable by 5.
 5. Add 50.
 6. Multiply by 20.
-7. Add 1017 (1018 if you have already had your birthday this year)
+7. Add 1018 (1019 if you have already had your birthday this year)
 8. Subtract the year you were born.
 9. Display the answer.
 
-```{r math_trick_nb_example}
-shoe_size <- 9
-shoe_size_mod <- (((shoe_size * 5) + 50) * 20) + 1018 - 1979
-shoe_size_mod
-```
+Insert your code chunk here:
+
 
 If you wanted to call this **script** in multiple Notebooks, you could save it as an R code file:
 
@@ -132,8 +121,8 @@ Note that nothing will display.
 6. You can now call this R script using ```{r math_trick}``` in an otherwise empty code chunk as such:
 
 ```{r math_trick}
-
 ```
+
 
 ### Save and Preview
 
