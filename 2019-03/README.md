@@ -23,10 +23,10 @@ class will be appropriate for you, please look over the lesson content above, or
 
 ### Day 1 (March 11, 9am - 12pm)
 
-1. Introduction to R and RStudio - [Download Online Lesson](https://caltechlibrary.github.io/R-Carpentry/2019-03/01-getting-started-notebook-version.nb.html)
+1. Introduction to R and RStudio - [View Online Lesson](https://caltechlibrary.github.io/R-Carpentry/2019-03/01-getting-started-notebook-version.nb.html)
 2. Working with R Projects
-3. Understanding Data Types and Working with Vectors
-4. R Markdown Notebooks
+3. Understanding Data Types and Working with Vectors [View Online Lesson](https://caltechlibrary.github.io/R-Carpentry/2019-03/02-data-types-vectors-notebook-version.nb.html)
+4. R Markdown Notebooks [Download Lesson](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/03-R_Notebooks.zip)
 
 Cheat Sheets:
 
@@ -125,7 +125,7 @@ You will need a [GitHub](https://github.com) account for the final day to publis
 ## Required Files
 
 1. Create a folder somewhere on your computer to store files associated with this workshop.
-2. Please download the following .zip file into the folder to you created in Step 1: https://github.com/caltechlibrary/R-Carpentry/tree/master/2019-03/user_downloads
+2. Please download the following .zip file into the folder to you created in Step 1: https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/carpentry-workshop.zip
 3. Open/extract the .zip file you downloaded in Step 2.
 4. You should now have, within your folder, a new folder entitled **carpentry-workshop**, and the following should be in that folder:
   * two files for *01-getting-started-notebook-version*, a .Rmd file and a .nb.html file
@@ -134,6 +134,7 @@ You will need a [GitHub](https://github.com) account for the final day to publis
   * an empty **fig_output/** folder
   * an **img/** folder, containing images needed by the .Rmd files
   * two .R *script* files, *install_packages.R* and *load_packages.R*
-5. Additional instructions will be posted here as needed.
+5. Part 3 of the Day 1 lesson, Understanding Data Types and Working with Vectors, can be downloaded [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/02-data-types-vectors-notebook-version.zip).
+6. Part 4 of the Day 1 lesson, R Markdown Notebooks, can be downloaded [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/03-R_Notebooks.zip).
 
 #### Page last updated 2019-03-10T16:26:57-07:00
