@@ -43,22 +43,33 @@ Each row holds information for a single animal, and the columns represent:
 | taxon            | e.g. Rodent, Reptile, Bird, Rabbit |
 | plot\_type       | type of plot                       |
 
-We are going to use the R function `download.file()` to download the CSV file
-that contains the survey data from figshare, and we will use `read.csv()` to
-load into memory the content of the CSV file as an object of class `data.frame`. 
-Inside the download.file command, the first entry is a character string with the source URL 
-("https://ndownloader.figshare.com/files/2292169"). This source URL downloads a CSV file from 
-figshare. The text after the comma ("data/portal_data_joined.csv") is the destination of the 
-file on your local machine. You'll need to have a folder on your machine called "data" where 
-you'll download the file. So this command downloads a file from figshare, names it 
-"portal_data_joined.csv," and adds it to a preexisting folder named "data."
+### Downloading Files
+
+Since we already downloaded the data file that we will be using, we don't need 
+to follow these directions at this time. However, in the future, you may need to 
+access data from an internal server or somewhere on the internet. For example, 
+if there is data being periodically written to a server, this command could be 
+used in a script to automatically download the most recent version of a data file.
+
+The R function `download.file()` would be used to download the CSV file that 
+contains the survey data from Figshare. Inside the download.file command, the 
+first entry is a character string with the source URL 
+("https://ndownloader.figshare.com/files/2292169"). This source URL downloads a 
+CSV file from Figshare. The text after the comma ("data/portal_data_joined.csv") 
+is the destination of the file on your local machine. You'll need to have a folder
+on your machine called "data" where you'll download the file. So this command 
+downloads a file from figshare, names it "portal_data_joined.csv," and adds it to 
+a preexisting folder named "data."
+
+Do not run this code chuck - for example only!
 
 ```{r, eval=FALSE, purl=TRUE}
-download.file(url="https://ndownloader.figshare.com/files/2292169",
-              destfile = "data/portal_data_joined.csv")
+# download.file(url="https://ndownloader.figshare.com/files/2292169",
+#              destfile = "data/portal_data_joined.csv")
 ```
 
-You are now ready to load the data:
+Now, we will use `read.csv()` to load into memory the content of the CSV file as 
+an object of class `data.frame` (you CAN run this code chunk):
 
 ```{r, eval=TRUE,  purl=FALSE}
 surveys <- read.csv("data/portal_data_joined.csv")
@@ -67,6 +78,8 @@ surveys <- read.csv("data/portal_data_joined.csv")
 This statement doesn't produce any output because, as you might recall,
 assignments don't display anything. If we want to check that our data has been
 loaded, we can see the contents of the data frame by typing its name: `surveys`.
+
+`> surveys`
 
 Wow... that was a lot of output. At least it means the data loaded
 properly. Let's check the top (the first 6 lines) of this data frame using the
@@ -86,12 +99,13 @@ head(surveys)
 > you can use the `read.csv2` function. It behaves exactly like `read.csv` but
 > uses different parameters for the decimal and the field separators. If you are
 > working with another format, they can be both specified by the user. Check out
-> the help for `read.csv()` by typing `?read.csv` to learn more. There is also the `read.delim()` for 
-> in tab separated data files. It is important to note that all of these functions 
-> are actually wrapper functions for the main `read.table()` function with different arguments.
-> As such, the surveys data above could have also been loaded by using `read.table()`
-> with the separation argument as `,`. The code is as follows:
-> `surveys <- read.table(file="data/portal_data_joined.csv", sep=",", header=TRUE)`.
+> the help for `read.csv()` by typing `?read.csv` to learn more. There is also 
+> the `read.delim()` for in tab separated data files. It is important to note that 
+> all of these functions are actually wrapper functions for the main `read.table()` > function with different arguments.
+>
+> As such, the surveys data above could have also been loaded by 
+> using `read.table()` with the separation argument as `,`. 
+> The code is as follows: `surveys <- read.table(file="data/portal_data_joined.csv", sep=",", header=TRUE)`.
 > The header argument has to be set to TRUE to be able to read the headers as
 > by default `read.table()` has the header argument set to FALSE.
 
@@ -106,9 +120,9 @@ spreadsheets from your hard drive (or the web).
 
 A data frame is the representation of data in the format of a table where the
 columns are vectors that all have the same length. Because columns are
-vectors, each column must contain a single type of data (e.g., characters, integers,
-factors). For example, here is a figure depicting a data frame comprising a
-numeric, a character, and a logical vector.
+vectors, each column must contain a single type of data (e.g., characters, 
+integers, factors). For example, here is a figure depicting a data frame 
+comprising a numeric, a character, and a logical vector.
 
 ![](./img/data-frame.svg)
 
@@ -127,8 +141,7 @@ content and the structure of a data frame. Here is a non-exhaustive list of
 functions to get a sense of the content/structure of the data. Let's try them out!
 
 * Size:
-    * `dim(surveys)` - returns a vector with the number of rows in the first element,
-          and the number of columns as the second element (the **dim**ensions of
+    * `dim(surveys)` - returns a vector with the number of rows in the first element, and the number of columns as the second element (the __dim__ensions of
           the object)
     * `nrow(surveys)` - returns the number of rows
     * `ncol(surveys)` - returns the number of columns
@@ -150,7 +163,6 @@ functions to get a sense of the content/structure of the data. Let's try them ou
 Note: most of these functions are "generic", they can be used on other types of
 objects besides `data.frame`.
 
-
 > ### Challenge
 >
 > Based on the output of `str(surveys)`, can you answer the following questions?
@@ -158,37 +170,8 @@ objects besides `data.frame`.
 > * What is the class of the object `surveys`?
 > * How many rows and how many columns are in this object?
 > * How many species have been recorded during these surveys?
->
-> ```{r, answer=TRUE, results="markup", purl=FALSE}
->
-> str(surveys)
->
-> ## * class: data frame
-> ## * how many rows: 34786,  how many columns: 13
-> ## * how many species: 48
->
-> ```
-
-
-```{r, echo=FALSE, purl=TRUE}
-
-## Challenge
-## Based on the output of `str(surveys)`, can you answer the following questions?
-## * What is the class of the object `surveys`?
-## * How many rows and how many columns are in this object?
-## * How many species have been recorded during these surveys?
-
-```
-
-
 
 ## Indexing and subsetting data frames
-
-```{r, echo=FALSE, purl=TRUE}
-
-## Indexing and subsetting data frames
-```
-
 
 Our survey data frame has rows and columns (it has 2 dimensions), if we want to
 extract some specific data from it, we need to specify the "coordinates" we
@@ -254,50 +237,8 @@ In RStudio, you can use the autocompletion feature to get the full and correct n
 > 4. Combine `nrow()` with the `-` notation above to reproduce the behavior of
 >    `head(surveys)`, keeping just the first through 6th rows of the surveys
 >    dataset.
->
-> ```{r, answer=TRUE, purl=FALSE}
-> ## 1.
-> surveys_200 <- surveys[200, ]
-> ## 2.
-> # Saving `n_rows` to improve readability and reduce duplication
-> n_rows <- nrow(surveys)
-> surveys_last <- surveys[n_rows, ]
-> ## 3.
-> surveys_middle <- surveys[n_rows / 2, ]
-> ## 4.
-> surveys_head <- surveys[-(7:n_rows), ]
-> ```
-
-
-```{r, echo=FALSE, purl=TRUE}
-### Challenges:
-###
-### 1. Create a `data.frame` (`surveys_200`) containing only the
-###    data in row 200 of the `surveys` dataset.
-###
-### 2. Notice how `nrow()` gave you the number of rows in a `data.frame`?
-###
-###      * Use that number to pull out just that last row in the data frame
-###      * Compare that with what you see as the last row using `tail()` to make
-###        sure it's meeting expectations.
-###      * Pull out that last row using `nrow()` instead of the row number
-###      * Create a new data frame object (`surveys_last`) from that last row
-###
-### 3. Use `nrow()` to extract the row that is in the middle of the
-###    data frame. Store the content of this row in an object named
-###    `surveys_middle`.
-###
-### 4. Combine `nrow()` with the `-` notation above to reproduce the behavior of
-###    `head(surveys)`, keeping just the first through 6th rows of the surveys
-###    dataset.
-
-```
 
 ## Factors
-
-```{r, echo=FALSE, purl=TRUE}
-### Factors
-```
 
 When we did `str(surveys)` we saw that several of the columns consist of
 integers. The columns `genus`, `species`, `sex`, `plot_type`, ... however, are
@@ -411,24 +352,8 @@ head(sex)
 > ### Challenge
 >
 > * Rename "F" and "M" to "female" and "male" respectively.
-> * Now that we have renamed the factor level to "undetermined", can you recreate the
->  barplot such that "undetermined" is last (after "male")?
->
-> ```{r, answer=TRUE, purl=FALSE}
-> levels(sex)[2:3] <- c("female", "male")
-> sex <- factor(sex, levels = c("female", "male", "undetermined"))
-> plot(sex)
-> ``` 
-
-
-```{r wrong-order, results='show', echo=FALSE, purl=TRUE}
-## Challenges
-##
-## * Rename "F" and "M" to "female" and "male" respectively.
-## * Now that we have renamed the factor level to "undetermined", can you recreate the
-##   barplot such that "undetermined" is last (after "male")
-```
-
+> * Now that we have renamed the factor level to "undetermined", can you recreate 
+> the barplot such that "undetermined" is last (after "male")?
 
 ### Using `stringsAsFactors=FALSE`
 
@@ -441,7 +366,6 @@ In most cases, it is preferable to set `stringsAsFactors = FALSE` when importing
 data and to convert as a factor only the columns that require this data
 type.
 
-
 ```{r, eval=FALSE, purl=TRUE}
 ## Compare the difference between our data read as `factor` vs `character`.
 surveys <- read.csv("data/portal_data_joined.csv", stringsAsFactors = TRUE)
@@ -452,79 +376,38 @@ str(surveys)
 surveys$plot_type <- factor(surveys$plot_type)
 ```
 
-
 > ### Challenge
 >
 > 1. We have seen how data frames are created when using `read.csv()`, but
 >   they can also be created by hand with the `data.frame()` function.  There are
 >   a few mistakes in this hand-crafted `data.frame`. Can you spot and fix them?
 >   Don't hesitate to experiment!
->
->     ```{r, eval=FALSE, purl=FALSE}
->     animal_data <- data.frame(
->               animal = c(dog, cat, sea cucumber, sea urchin),
->               feel = c("furry", "squishy", "spiny"),
->               weight = c(45, 8 1.1, 0.8)
->               )
->     ```
->
->     ```{r, eval=FALSE, purl=TRUE, echo=FALSE}
->     ## Challenge:
->     ##  There are a few mistakes in this hand-crafted `data.frame`,
->     ##  can you spot and fix them? Don't hesitate to experiment!
->     animal_data <- data.frame(
->           animal = c(dog, cat, sea cucumber, sea urchin),
->           feel = c("furry", "squishy", "spiny"),
->           weight = c(45, 8 1.1, 0.8)
->           )
->     ```
->
+
+```{r}
+animal_data <- data.frame(
+               animal = c(dog, cat, sea cucumber, sea urchin),
+               feel = c("furry", "squishy", "spiny"),
+               weight = c(45, 8 1.1, 0.8)
+               )
+```
+
 > 2. Can you predict the class for each of the columns in the following example?
 >    Check your guesses using `str(country_climate)`:
 >      * Are they what you expected?  Why? Why not?
->      * What would have been different if we had added `stringsAsFactors = FALSE` when creating the data frame?
->      * What would you need to change to ensure that each column had the accurate data type?
->
->     ```{r, eval=FALSE, purl=FALSE}
->     country_climate <- data.frame(
->            country = c("Canada", "Panama", "South Africa", "Australia"),
->            climate = c("cold", "hot", "temperate", "hot/temperate"),
->            temperature = c(10, 30, 18, "15"),
->            northern_hemisphere = c(TRUE, TRUE, FALSE, "FALSE"),
->            has_kangaroo = c(FALSE, FALSE, FALSE, 1)
->            )
->     ```
->
->    ```{r, eval=FALSE, purl=TRUE, echo=FALSE}
->    ## Challenge:
->    ##   Can you predict the class for each of the columns in the following
->    ##   example?
->    ##   Check your guesses using `str(country_climate)`:
->    ##   * Are they what you expected? Why? why not?
->    ##   * What would have been different if we had added `stringsAsFactors = FALSE`
->    ##     when we created this data frame?
->    ##   * What would you need to change to ensure that each column had the
->    ##     accurate data type?
->    country_climate <- data.frame(country = c("Canada", "Panama", "South Africa", "Australia"),
->                                   climate = c("cold", "hot", "temperate", "hot/temperate"),
->                                   temperature = c(10, 30, 18, "15"),
->                                   northern_hemisphere = c(TRUE, TRUE, FALSE, "FALSE"),
->                                   has_kangaroo = c(FALSE, FALSE, FALSE, 1))
->    ```
->
->    ```{text_answer, echo=FALSE, purl=FALSE}
->    * missing quotations around the names of the animals
->    * missing one entry in the `feel` column (probably for one of the furry animals)
->    * missing one comma in the `weight` column
->    * `country`, `climate`, `temperature`, and `northern_hemisphere` are
->       factors; `has_kangaroo` is numeric
->    * using `stringsAsFactors = FALSE` would have made character vectors instead of
->      factors
->    * removing the quotes in `temperature` and `northern_hemisphere` and replacing 1
->      by TRUE in the `has_kangaroo` column would give what was probably 
->      intended
->    ```
->
+>      * What would have been different if we had 
+>         added `stringsAsFactors = FALSE` when creating the data frame?
+>      * What would you need to change to ensure that each column had the accurate 
+>         data type?
+
+```{r}
+     country_climate <- data.frame(
+            country = c("Canada", "Panama", "South Africa", "Australia"),
+            climate = c("cold", "hot", "temperate", "hot/temperate"),
+            temperature = c(10, 30, 18, "15"),
+            northern_hemisphere = c(TRUE, TRUE, FALSE, "FALSE"),
+            has_kangaroo = c(FALSE, FALSE, FALSE, 1)
+          )
+```
 
 The automatic conversion of data type is sometimes a blessing, sometimes an
 annoyance. Be aware that it exists, learn the rules, and double check that data
@@ -547,7 +430,14 @@ integer values.
 ```{r, eval=FALSE, purl=FALSE}
 str(surveys)
 ```
-We are going to use the `ymd()` function from the package **`lubridate`** (which belongs to the **`tidyverse`**; learn more [here](https://www.tidyverse.org/)). . **`lubridate`** gets installed as part as the **`tidyverse`** installation. When you load  the **`tidyverse`** (`library(tidyverse)`), the core packages (the packages used in most data analyses) get loaded. **`lubridate`** however does not belong to the core tidyverse, so you have to load it explicitly with `library(lubridate)`
+
+We are going to use the `ymd()` function from the package **`lubridate`** (which 
+belongs to the **`tidyverse`**; learn more [here](https://www.tidyverse.org/)). 
+**`lubridate`** gets installed as part as the **`tidyverse`** installation. When 
+you load  the **`tidyverse`** (`library(tidyverse)`), the core packages (the 
+packages used in most data analyses) get loaded. **`lubridate`** however does not 
+belong to the core tidyverse, so you have to load it explicitly with 
+`library(lubridate)`
 
 Start by loading the required package:
 
@@ -559,7 +449,6 @@ library(lubridate)
 `Date` vector. `Date` is a class of data recognized by R as being a date and can
 be manipulated as such. The argument that the function requires is flexible,
 but, as a best practice, is a character vector formatted as "YYYY-MM-DD".
-
 
 Let's create a date object and inspect the structure:
 
@@ -602,10 +491,14 @@ Let's make sure everything worked correctly. One way to inspect the new column i
 summary(surveys$date)
 ```
 
-Something went wrong: some dates have missing values. Let's investigate where they are coming from.
+Something went wrong: some dates have missing values. Let's investigate where they 
+are coming from.
 
 We can use the functions we saw previously to deal with missing data to identify
-the rows in our data frame that are failing. If we combine them with what we learned about subsetting data frames earlier, we can extract the columns "year, "month", "day" from the records that have `NA` in our new column `date`. We will also use `head()` so we don't clutter the output:
+the rows in our data frame that are failing. If we combine them with what we 
+learned about subsetting data frames earlier, we can extract the columns "year, 
+"month", "day" from the records that have `NA` in our new column `date`. We will 
+also use `head()` so we don't clutter the output:
 
 ```{r, results=TRUE, purl=FALSE}
 missing_dates <- surveys[is.na(surveys$date), c("year", "month", "day")]
