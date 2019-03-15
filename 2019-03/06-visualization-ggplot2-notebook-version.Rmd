@@ -4,10 +4,6 @@ author: Data Carpentry contributors
 output: html_notebook
 ---
 
-```{r setup, echo=FALSE, purl=FALSE}
-surveys_complete <- read_csv(file = "data_output/surveys_complete.csv", col_types = cols())
-```
-
 ------------
 
 > ### Learning Objectives
@@ -20,10 +16,10 @@ surveys_complete <- read_csv(file = "data_output/surveys_complete.csv", col_type
 
 --------------
 
-We start by loading the required packages. **`ggplot2`** is included in the **`tidyverse`** package.
+We start by loading our packages. **`ggplot2`** is included in the **`tidyverse`** package.
 
-```{r load-package, message=FALSE, purl=FALSE}
-library(tidyverse)
+```{r, message = FALSE, purl = FALSE}
+source("load_packages.R")
 ```
 
 If not still in the workspace, load the data we saved in the previous lesson.
