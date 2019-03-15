@@ -624,7 +624,7 @@ Let's start by removing observations of animals for which `weight` and `hindfoot
 surveys_complete <- surveys %>%
   filter(!is.na(weight),           # remove missing weight
          !is.na(hindfoot_length),  # remove missing hindfoot_length
-         !is.na(sex))                # remove missing sex
+         !is.na(sex))              # remove missing sex
 ```
 
 Because we are interested in plotting how species abundances have changed
