@@ -18,13 +18,13 @@ output: html_notebook
 
 We start by loading our packages. **`ggplot2`** is included in the **`tidyverse`** package.
 
-```{r, message = FALSE, purl = FALSE}
+```{r}
 source("load_packages.R")
 ```
 
 If not still in the workspace, load the data we saved in the previous lesson.
 
-```{r load-data, eval=FALSE, purl=FALSE}
+```{r}
 surveys_complete <- read_csv("data_output/surveys_complete.csv")
 ```
 
@@ -81,22 +81,16 @@ ggplot(data = surveys_complete, mapping = aes(x = weight, y = hindfoot_length)) 
 
 The `+` in the **`ggplot2`** package is particularly useful because it allows you
 to modify existing `ggplot` objects. This means you can easily set up plot
-templates and conveniently explore different types of plots, so the above
-plot can also be generated with code like this:
+templates and conveniently explore different types of plots. So, the above
+plot can also be generated with code like this by assigning a `ggplot` function to an object:
 
 ```{r, first-ggplot-with-plus, eval=FALSE, purl=FALSE}
-# Assign plot to a variable
 surveys_plot <- ggplot(data = surveys_complete, 
                        mapping = aes(x = weight, y = hindfoot_length))
-
-# Draw the plot
-surveys_plot + 
-    geom_point()
 ```
 
-```{r, eval=FALSE, purl=TRUE, echo=FALSE, purl=FALSE}
-# Create a ggplot and draw it
-surveys_plot <- ggplot(data = surveys_complete, mapping = aes(x = weight, y = hindfoot_length))
+Now, draw the plot:
+```{r eval=FALSE, purl=FALSE}
 surveys_plot + 
     geom_point()
 ```
@@ -108,7 +102,7 @@ surveys_plot +
   y-axis mapping you set up in `aes()`.
 - You can also specify mappings for a given geom independently of the
   mappings defined globally in the `ggplot()` function.
-- The `+` sign used to add new layers must be placed at the end of the line containing
+- The `+` sign used to add new layers **MUST** be placed at the end of the line containing
 the *previous* layer. If, instead, the `+` sign is added at the beginning of the line
 containing the new layer, **`ggplot2`** will not add the new layer and will return an 
 error message.
@@ -117,7 +111,9 @@ error message.
 # This is the correct syntax for adding layers
 surveys_plot +
   geom_point()
+```
 
+```{r eval=FALSE, purl=FALSE}
 # This will not add the new layer and will return an error message
 surveys_plot
   + geom_point()
@@ -151,23 +147,6 @@ surveys_plot
 >   compared to a scatter plot? Examine the above scatter plot and compare it
 >   with the hexagonal bin plot that you created.
 
-```{r hexbin-challenge, echo=FALSE, eval=FALSE, purl=TRUE}
-### Challenge with hexbin
-##
-## To use the hexagonal binning with **`ggplot2`**, first install the `hexbin`
-## package from CRAN:
-
-install.packages("hexbin")
-library(hexbin)
-
-## Then use the `geom_hex()` function:
-
-surveys_plot +
-    geom_hex()
-
-## What are the relative strengths and weaknesses of a hexagonal bin
-## plot compared to a scatter plot?
-```
 
 ## Building your plots iteratively
 
@@ -216,19 +195,11 @@ ggplot(data = surveys_complete, mapping = aes(x = weight, y = hindfoot_length, c
     geom_jitter(alpha = 0.1)
 ```
 
-
-
-
 > ### Challenge
 >
 > Use what you just learned to create a scatter plot of `weight` over
 > `species_id` with the plot types showing in different colors. Is this a good
 > way to show this type of data?
-> ```{r scatter-challenge, answer=TRUE, purl=FALSE}
-> ggplot(data = surveys_complete, mapping = aes(x = species_id, y = weight)) +
->    geom_point(aes(color = plot_type))
-> ```
-
 
 ## Boxplot
 
@@ -279,28 +250,6 @@ hidden?
 >   the sample was taken (`plot_id`).
 >
 > *Hint:* Check the class for `plot_id`. Consider changing the class of `plot_id` from integer to factor. Why does this change how R makes the graph?
-
-```{r boxplot-challenge, eval=FALSE, purl=TRUE, echo=FALSE}
-## Challenge with boxplots:
-##  Start with the boxplot we created:
-ggplot(data = surveys_complete, mapping = aes(x = species_id, y = weight)) +
-  geom_boxplot(alpha = 0) +
-  geom_jitter(alpha = 0.3, color = "tomato")
-
-##  1. Replace the box plot with a violin plot; see `geom_violin()`.
-
-##  2. Represent weight on the log10 scale; see `scale_y_log10()`.
-
-##  3. Create boxplot for `hindfoot_length` overlaid on a jitter layer.
-
-##  4. Add color to the data points on your boxplot according to the
-##  plot from which the sample was taken (`plot_id`).
-##  *Hint:* Check the class for `plot_id`. Consider changing the class
-##  of `plot_id` from integer to factor. Why does this change how R
-##  makes the graph?
-
-```
-
 
 ## Plotting time series data
 
@@ -393,30 +342,10 @@ The [**`ggplot2`** extensions website](https://www.ggplot2-exts.org) provides a 
 of packages that extend the capabilities of **`ggplot2`**, including additional
 themes.
 
-
 > ### Challenge
 
 > Use what you just learned to create a plot that depicts how the average weight
 > of each species changes through the years.
-> 
-> ```{r average-weight-time-series, answer=TRUE, purl=FALSE}
-> yearly_weight <- surveys_complete %>%
->                 group_by(year, species_id) %>%
->                  summarize(avg_weight = mean(weight))
-> ggplot(data = yearly_weight, mapping = aes(x=year, y=avg_weight)) +
->    geom_line() +
->    facet_wrap(~ species_id) +
->    theme_bw()
->```
-
-
-```{r, eval=FALSE, purl=TRUE, echo=FALSE}
-### Plotting time series challenge:
-##
-##  Use what you just learned to create a plot that depicts how the
-##  average weight of each species changes through the years.
-
-```
 
 The `facet_wrap` geometry extracts plots into an arbitrary number of dimensions
 to allow them to cleanly fit on one page. On the other hand, the `facet_grid`
@@ -432,6 +361,9 @@ has changed through time:
 yearly_sex_weight <- surveys_complete %>%
     group_by(year, sex, species_id) %>%
     summarize(avg_weight = mean(weight))
+```
+
+```{r purl=FALSE}
 ggplot(data = yearly_sex_weight, 
        mapping = aes(x = year, y = avg_weight, color = species_id)) +
     geom_line() +
@@ -510,6 +442,9 @@ an object to be able to easily apply them to other plots you may create:
 grey_theme <- theme(axis.text.x = element_text(colour = "grey20", size = 12, angle = 90, hjust = 0.5, vjust = 0.5),
                           axis.text.y = element_text(colour = "grey20", size = 12),
                           text = element_text(size = 16))
+```
+
+```{r purl=FALSE}
 ggplot(surveys_complete, aes(x = species_id, y = hindfoot_length)) +
     geom_boxplot() +
     grey_theme
@@ -529,28 +464,26 @@ ggplot(surveys_complete, aes(x = species_id, y = hindfoot_length)) +
 
 ## Arranging and exporting plots
 
-Faceting is a great tool for splitting one plot into multiple plots, but sometimes you may want to produce a single figure that contains multiple plots using different variables or even different data frames. The **`gridExtra`** package allows us to combine separate ggplots into a single figure using `grid.arrange()`:
-
-```{r install-gridextra, message=FALSE, purl=TRUE, eval=FALSE}
-install.packages("gridExtra")
-```
+Faceting is a great tool for splitting one plot into multiple plots, but sometimes you may want to produce a single figure that contains multiple plots using different variables or even different data frames. The **`gridExtra`** package allows us to combine separate ggplots into a single figure using `grid.arrange()`. This package has already been installed and loaded in our `load_packages.R` script.
 
 ```{r gridarrange-example, message=FALSE, purl=FALSE, fig.width=10}
-library(gridExtra)
 
 spp_weight_boxplot <- ggplot(data = surveys_complete, 
                              mapping = aes(x = species_id, y = weight)) +
   geom_boxplot() +
   xlab("Species") + ylab("Weight (g)") +
   scale_y_log10()
+```
 
+```{r}
 spp_count_plot <- ggplot(data = yearly_counts, 
                          mapping = aes(x = year, y = n, color = species_id)) +
   geom_line() + 
   xlab("Year") + ylab("Abundance")
+```
 
+```{r}
 grid.arrange(spp_weight_boxplot, spp_count_plot, ncol = 2, widths = c(4, 6))
-
 ```
 
 In addition to the `ncol` and `nrow` arguments, used to make simple arrangements, there are tools for [constructing more complex layouts](https://cran.r-project.org/web/packages/gridExtra/vignettes/arrangeGrob.html). 
@@ -573,15 +506,19 @@ my_plot <- ggplot(data = yearly_sex_counts,
     theme(axis.text.x = element_text(colour = "grey20", size = 12, angle = 90, hjust = 0.5, vjust = 0.5),
                         axis.text.y = element_text(colour = "grey20", size = 12),
           text=element_text(size = 16))
-ggsave("fig_output/yearly_sex_counts.png", my_plot, width = 15, height = 10)
+```
 
+```{r}
+ggsave("fig_output/yearly_sex_counts.png", my_plot, width = 15, height = 10)
+```
+
+```{r}
 # This also works for grid.arrange() plots
 combo_plot <- grid.arrange(spp_weight_boxplot, spp_count_plot, ncol = 2, widths = c(4, 6))
 ggsave("fig_output/combo_plot_abun_weight.png", combo_plot, width = 10, dpi = 300)
 ```
 
 Note: The parameters `width` and `height` also determine the font size in the saved plot.
-
 
 ```{r final-challenge, eval=FALSE, purl=TRUE, echo=FALSE}
 ### Final plotting challenge:
