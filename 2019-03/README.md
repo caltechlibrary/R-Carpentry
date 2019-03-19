@@ -139,5 +139,9 @@ You will need a [GitHub](https://github.com) account for the final day to publis
 7. The Day 2 lesson, Starting With Data, can be downloaded [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/04-starting-with-data-notebook-version.zip). Please note - there are three files in this zip. Please put the two 04 files (the .Rmd and the .nb.html) in the **main carpentry-workshop/** directory, with the other Rmd and nb.html files. Please put the file that is in the *img/* folder from the downloaded zip (data-frame.svg) into the *img/* folder under *carpentry-workshop*.
 8. The Day 3 lesson, The Tidyverse, can be downloaded [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/05-tidyverse-notebook-version.zip). Please note - there are four files in this zip. Please put the two 05 files (the .Rmd and the .nb.html) in the **main carpentry-workshop/** directory, with the other Rmd and nb.html files. Please put the two files in the *img/* folder from the downloaded zip into the *img/* folder under *carpentry-workshop*.
 9. The Day 3 lesson for ggplot is [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/06-ggplot-notebook-version.zip). Download the zip file, extract it, and move both 06 files into the **main carpentry-workshop/** directory.
+10. The Day 4 lesson on making a report can be downloaded
+[here](https://caltechlibrary.github.io/2019-03/user_downloads/Day4.zip).
+Download the zip file, extract it, and put it someplace you can find it like
+your desktop.
 
 #### Page last updated 2019-03-18T10:52:28-07:00
