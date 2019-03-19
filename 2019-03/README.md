@@ -14,7 +14,7 @@
 
 ## Brief Syllabus:
 
-Details will be added next week. The lessons will be based on the
+The lessons will be based on the
 [Data Analysis and Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/index.html)
 Data Carpentry lesson, if you would like to get a preview of the content.
 
@@ -140,4 +140,11 @@ You will need a [GitHub](https://github.com) account for the final day to publis
 8. The Day 3 lesson, The Tidyverse, can be downloaded [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/05-tidyverse-notebook-version.zip). Please note - there are four files in this zip. Please put the two 05 files (the .Rmd and the .nb.html) in the **main carpentry-workshop/** directory, with the other Rmd and nb.html files. Please put the two files in the *img/* folder from the downloaded zip into the *img/* folder under *carpentry-workshop*.
 9. The Day 3 lesson for ggplot is [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/06-ggplot-notebook-version.zip). Download the zip file, extract it, and move both 06 files into the **main carpentry-workshop/** directory.
 
-#### Page last updated 2019-03-18T10:52:28-07:00
+---
+
+## Resources
+
+The Caltech Library has [many books and ebooks on R](https://caltech.tind.io/yourbaskets/display_public?bskid=524), including many on the [Safari platform](https://caltech.tind.io/record/971459?ln=en).
+
+
+#### Page last updated 2019-03-19T17:09:16Z
