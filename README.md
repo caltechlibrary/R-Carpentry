@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- page last updated 2019-03-04T15:00:48-08:00 -->
 
 # Introduction to R for Postdocs
@@ -26,8 +25,6 @@ class will be appropriate for you, please look over the lesson content above, or
 
 1. Introduction to R and RStudio - [View Online Lesson](https://caltechlibrary.github.io/R-Carpentry/2019-03/01-getting-started-notebook-version.nb.html)
 2. Working with R Projects
-3. Understanding Data Types and Working with Vectors [View Online Lesson](https://caltechlibrary.github.io/R-Carpentry/2019-03/02-data-types-vectors-notebook-version.nb.html)
-4. R Markdown Notebooks [Download Lesson](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/03-R_Notebooks.zip)
 
 Cheat Sheets:
 
@@ -35,7 +32,12 @@ Cheat Sheets:
 
 [Base R](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf)
 
-### Day 2 (March 12, 9am - 12pm)
+### Day 2 (November 9, 10am - 11am)
+
+3. Understanding Data Types and Working with Vectors [View Online Lesson](https://caltechlibrary.github.io/R-Carpentry/2019-03/02-data-types-vectors-notebook-version.nb.html)
+4. R Markdown Notebooks [Download Lesson](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/03-R_Notebooks.zip)
+
+### Day 3 (March 18, 9am - 12pm)
 
 1. Working with Data Frames
 2. Working with Factors
@@ -45,9 +47,7 @@ Cheat Sheets:
 
 [Dates and Times - the lubridate package](https://www.rstudio.com/resources/cheatsheets/#lubridate)
 
-### Day 3 (March 18, 9am - 12pm)
 
-1. The Tidyverse - tidyr and dplyr
 2. Plotting with ggplot2
 
 Cheat Sheets:
@@ -56,11 +56,9 @@ Cheat Sheets:
 
 [Data Visualization with ggplot2](https://www.rstudio.com/resources/cheatsheets/#ggplot2)
 
-### Day 4 (March 19, 9am - 12pm)
+### Day 4 (November 11, 10am - 11am)
 
-1. Reproducible Reporting and Interactive Publishing
-
-Links to Cheat Sheets - coming soon!
+1. The Tidyverse - tidyr and dplyr
 
 ---
 
@@ -86,21 +84,18 @@ development environment (IDE) that makes using R easier and more interactive.
   * [Linux](https://cloud.r-project.org/bin/linux) (Information provided to get the most recent version of R for common distributions.)
   * Please note that version 4.1.2 is due to be released on November 1. Please use 4.1.1 unless you have a pressing need to upgrade.
 
-
 2. Open the `.exe` (Windows) or `.pkg` (Mac) just downloaded to install R. For Linux, follow the
 directions given on the website for your particular distribution.
   * If you are a Mac user, it is also a good idea to install [XQuartz](https://www.xquartz.org/) (needed by some R packages).
 
-
 3. Go to the [RStudio download page](https://www.rstudio.com/products/rstudio/download/#download) and
 download the latest version of RStudio for your platform (2021.09.0+351 or later).
 
-
 4. Open the downloaded file and install RStudio.
-
 
 5. Once it's installed, open RStudio to make sure it works and you don't get any error messages, and the Console window shows the
 correct version of R installed (should be 4.4.1).
+
 
 ### If you already have R and RStudio installed:
 
@@ -132,10 +127,6 @@ available, quit RStudio, and download the latest version of RStudio from the
 7. The Day 2 lesson, Starting With Data, can be downloaded [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/04-starting-with-data-notebook-version.zip). Please note - there are three files in this zip. Please put the two 04 files (the .Rmd and the .nb.html) in the **main carpentry-workshop/** directory, with the other Rmd and nb.html files. Please put the file that is in the *img/* folder from the downloaded zip (data-frame.svg) into the *img/* folder under *carpentry-workshop*.
 8. The Day 3 lesson, The Tidyverse, can be downloaded [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/05-tidyverse-notebook-version.zip). Please note - there are four files in this zip. Please put the two 05 files (the .Rmd and the .nb.html) in the **main carpentry-workshop/** directory, with the other Rmd and nb.html files. Please put the two files in the *img/* folder from the downloaded zip into the *img/* folder under *carpentry-workshop*.
 9. The Day 3 lesson for ggplot is [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/06-ggplot-notebook-version.zip). Download the zip file, extract it, and move both 06 files into the **main carpentry-workshop/** directory.
-10. The Day 4 lesson on making a report can be downloaded
-[here](https://caltechlibrary.github.io/R-Carpentry/2019-03/user_downloads/Day4.zip).
-Download the zip file, extract it, and put it someplace you can find it like
-your desktop.
 
 ---
 
@@ -144,4 +135,3 @@ your desktop.
 The Caltech Library has [many books and ebooks on R](https://caltech.tind.io/yourbaskets/display_public?bskid=524), including many on the [Safari platform](https://caltech.tind.io/record/971459?ln=en).
 
 #### Page last updated 2019-03-19T17:09:16Z
->>>>>>> 6a1523ad7a1d5bb290d0825e472a4ed3772ebfc1
