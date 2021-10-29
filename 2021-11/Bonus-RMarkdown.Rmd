@@ -1,8 +1,9 @@
 ---
-title: "Notebooks"
+title: "Notebooks and Markdown"
 author: "Donna Wrublewski"
 output:
   html_document:
+    toc: yes
     df_print: paged
   pdf_document: default
 ---
