@@ -1,14 +1,12 @@
 ---
 title: "Understanding Data Types and Working with Vectors"
 author: "Data Carpentry contributors; Kristin Briney; Donna Wrublewski"
-minutes: 45
+date: November 9, 2021
+
 output:
   html_document:
     toc: yes
     df_print: paged
-  html_notebook:
-    theme: united
-    toc: yes
 ---
 
 ------------

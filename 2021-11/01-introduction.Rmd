@@ -1,12 +1,12 @@
 ---
 title: "Getting Started: R and RStudio"
 author: "Data Carpentry contributors; Kristin Briney; Donna Wrublewski"
-output:
-  html_notebook:
-    theme: united
-    toc: yes
-minutes: 15
 date: November 8, 2021
+
+output:
+  html_document:
+    toc: yes
+    df_print: paged
 ---
 
 ------------
