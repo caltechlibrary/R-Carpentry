@@ -1,14 +1,12 @@
 <!-- page last updated 2019-03-04T15:00:48-08:00 -->
 
-# Introduction to R for Postdocs
+# Introduction to R
 
-### Date: March 11-12 & 18-19, 2019
+### Date: November 8-11, 2021
 
-### Location: TBD
+### Location: Online
 
-### Instructors: Donna Wrublewski, Gail Clement, Tom Morrell
-
-### Helpers: Peter Collopy
+### Instructors: Kristin Briney, Donna Wrublewski
 
 ---
 
