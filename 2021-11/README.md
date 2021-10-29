@@ -19,7 +19,7 @@ Data Carpentry lesson, if you would like to get a preview of the content.
 **Please note that this class assumes no prior knowledge of, or experience with, R or RStudio. If you are not sure if this
 class will be appropriate for you, please look over the lesson content above, or email the Instructors.**
 
-### Day 1 (March 11, 9am - 12pm)
+### Day 1 (November 8, 10:45am - 11:15am)
 
 1. Introduction to R and RStudio - [View Online Lesson](https://caltechlibrary.github.io/R-Carpentry/2019-03/01-getting-started-notebook-version.nb.html)
 2. Working with R Projects
