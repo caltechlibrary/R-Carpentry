@@ -19,7 +19,7 @@ Data Carpentry lesson, if you would like to get a preview of the content.
 **Please note that this class assumes no prior knowledge of, or experience with, R or RStudio. If you are not sure if this
 class will be appropriate for you, please look over the lesson content above, or email the Instructors.**
 
-### Day 1 (November 8, 10:45am - 11:15am)
+### Day 1 (November 8, 9:45am - 11:15am)
 
 1. Introduction to R and RStudio - [View Online Lesson](https://caltechlibrary.github.io/R-Carpentry/2019-03/01-getting-started-notebook-version.nb.html)
 2. Working with R Projects
@@ -32,7 +32,7 @@ Cheat Sheets:
 
 [Base R](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf)
 
-### Day 2 (March 12, 9am - 12pm)
+### Day 2 (November 9, 9:45am - 11:15am)
 
 1. Working with Data Frames
 2. Working with Factors
@@ -42,7 +42,7 @@ Cheat Sheets:
 
 [Dates and Times - the lubridate package](https://www.rstudio.com/resources/cheatsheets/#lubridate)
 
-### Day 3 (March 18, 9am - 12pm)
+### Day 3 (November 9, 9:45am - 11:15am)
 
 1. The Tidyverse - tidyr and dplyr
 2. Plotting with ggplot2
@@ -53,7 +53,7 @@ Cheat Sheets:
 
 [Data Visualization with ggplot2](https://www.rstudio.com/resources/cheatsheets/#ggplot2)
 
-### Day 4 (March 19, 9am - 12pm)
+### Day 4 (November 9, 9:45am - 11:15am)
 
 1. Reproducible Reporting and Interactive Publishing
 
