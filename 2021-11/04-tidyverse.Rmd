@@ -1,6 +1,6 @@
 ---
-title: Manipulating, analyzing and exporting data with tidyverse
-author: Data Carpentry contributors
+title: "Manipulating, analyzing and exporting data with tidyverse"
+author: "Data Carpentry contributors; Kristin Briney; Donna Wrublewski"
 output: html_notebook
 ---
 
