@@ -24,7 +24,6 @@ class will be appropriate for you, please look over the lesson content above, or
 1. Introduction to R and RStudio - [View Online Lesson](https://caltechlibrary.github.io/R-Carpentry/2019-03/01-getting-started-notebook-version.nb.html)
 2. Working with R Projects
 3. Understanding Data Types and Working with Vectors [View Online Lesson](https://caltechlibrary.github.io/R-Carpentry/2019-03/02-data-types-vectors-notebook-version.nb.html)
-4. R Markdown Notebooks [Download Lesson](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/03-R_Notebooks.zip)
 
 Cheat Sheets:
 
@@ -42,7 +41,7 @@ Cheat Sheets:
 
 [Dates and Times - the lubridate package](https://www.rstudio.com/resources/cheatsheets/#lubridate)
 
-### Day 3 (November 9, 9:45am - 11:15am)
+### Day 3 (November 10, 9:45am - 11:15am)
 
 1. The Tidyverse - tidyr and dplyr
 2. Plotting with ggplot2
@@ -53,7 +52,7 @@ Cheat Sheets:
 
 [Data Visualization with ggplot2](https://www.rstudio.com/resources/cheatsheets/#ggplot2)
 
-### Day 4 (November 9, 9:45am - 11:15am)
+### Day 4 (November 11, 9:45am - 11:15am)
 
 1. Reproducible Reporting and Interactive Publishing
 
