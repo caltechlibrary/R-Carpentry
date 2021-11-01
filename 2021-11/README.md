@@ -1,5 +1,3 @@
-<!-- page last updated 2019-03-04T15:00:48-08:00 -->
-
 # Introduction to R
 
 ### Date: November 8-11, 2021
@@ -26,7 +24,7 @@ class will be appropriate for you, please look over the lesson content above, or
 
 Cheat Sheets:
 
-[RStudio](https://www.rstudio.com/resources/cheatsheets/#ide)
+[RStudio](https://raw.githubusercontent.com/rstudio/cheatsheets/main/rstudio-ide.pdf)
 
 [Base R](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf)
 
@@ -37,8 +35,6 @@ Cheat Sheets:
 2. Working with Data Frames
 3. Working with Factors
 
-Cheat Sheets:
-
 
 ### Day 3 (November 10, 9:45am - 11:15am)
 
@@ -48,11 +44,11 @@ Cheat Sheets:
 
 Cheat Sheets:
 
-[Tidyverse for Beginners](https://datacamp-community-prod.s3.amazonaws.com/e63a8f6b-2aa3-4006-89e0-badc294b179c)
+[Data Tidying with tidyr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf)
 
 [Data Visualization with ggplot2](https://www.rstudio.com/resources/cheatsheets/#ggplot2)
 
-[Dates and Times - the lubridate package](https://www.rstudio.com/resources/cheatsheets/#lubridate)
+[Dates and Times - the lubridate package](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf)
 
 ### Day 4 (November 11, 9:45am - 11:15am)
 
