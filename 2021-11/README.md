@@ -32,27 +32,21 @@ Cheat Sheets:
 ### Day 2 (November 9, 9:45am - 11:15am)
 
 1. Understanding Data Types and Working with Vectors
-2. Working with Data Frames
-3. Working with Factors
 
 
 ### Day 3 (November 10, 9:45am - 11:15am)
 
+1. Working with Data Frames
+2. Working with Factors
+
+
+### Day 4 (November 11, 9:45am - 11:15am)
+
 1. The Tidyverse - tidyr and dplyr
-2. Plotting with ggplot2
-3. Formatting Dates
 
 Cheat Sheets:
 
 [Data Tidying with tidyr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf)
-
-[Data Visualization with ggplot2](https://www.rstudio.com/resources/cheatsheets/#ggplot2)
-
-[Dates and Times - the lubridate package](https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf)
-
-### Day 4 (November 11, 9:45am - 11:15am)
-
-
 
 ---
 
