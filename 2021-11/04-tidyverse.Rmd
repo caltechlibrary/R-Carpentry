@@ -85,7 +85,7 @@ and **`tidyr`** gives you tools for this and more sophisticated  data manipulati
 
 To learn more about **`dplyr`** and **`tidyr`** after the workshop, you may want 
 to check out this
-[handy data transformation with **`dplyr`** cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf) and this [one about **`tidyr`**](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf).
+[handy data transformation with **`dplyr`** cheatsheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf) and this [one about **`tidyr`**](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf).
 
 We'll read in our data using the `read_csv()` function, from the tidyverse package **`readr`**, instead of `read.csv()`.
 
@@ -108,7 +108,7 @@ view(surveys)
 From the str() command, notice that the class of the data is now `tbl_df`
 
 This is referred to as a "tibble". Tibbles tweak some of the behaviors of the data frame objects we 
-introduced in the previous episode. The data structure is very similar to a data frame. For our 
+introduced previously. The data structure is very similar to a data frame. For our 
 purposes, the only differences are that:
 
 1. In addition to displaying the data type of each column under its name, it
@@ -160,7 +160,7 @@ Use filter() to choose rows or columns?
 What if you want to select and filter at the same time? There are three
 ways to do this: use intermediate steps, nested functions, or pipes.
 
-(Note: remember back ot the Math Trick example!)
+(Note: remember back to the Math Trick example!)
 
 With intermediate steps, you create a temporary data frame and use
 that as input to the next function, like this:
@@ -435,7 +435,7 @@ surveys %>%
 ```
 
 From the table above, we may learn that, for instance, there are 75 observations 
-ofthe *albigula* species that are not specified for its sex (i.e. `NA`).
+of the *albigula* species that are not specified for its sex (i.e. `NA`).
 
 > ### Challenge 5.3 - Working with count():
 > 1. How many animals were caught in each `plot_type` surveyed?
