@@ -46,7 +46,9 @@ Cheat Sheets:
 
 Cheat Sheets:
 
-[Data Tidying with tidyr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf)
+[Data tidying with tidyr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf)
+
+[Data transformation with dplyr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf)
 
 ---
 
@@ -66,13 +68,10 @@ development environment (IDE) that makes using R easier and more interactive.
 
 ### If you don't have R and RStudio installed:
 
-1. Download R Version 3.5.2 from the CRAN website for your operating system:
+1. Download R Version 4.1.1 or 4.1.2 from the CRAN website for your operating system:
   * [Windows](http://cran.r-project.org/bin/windows/base/release.htm)
   * [Mac OS](http://cran.r-project.org/bin/macosx/)
   * [Linux](https://cloud.r-project.org/bin/linux) (Information provided to get the most recent version of R for common distributions.)
-  * Note that 3.5.3 is due to be released on
-March 11 - please do not upgrade during the workshop unless you have a pressing
-need to do so.
 
 
 2. Open the `.exe` (Windows) or `.pkg` (Mac) just downloaded to install R. For Linux, follow the
@@ -81,14 +80,14 @@ directions given on the website for your particular distribution.
 
 
 3. Go to the [RStudio download page](https://www.rstudio.com/products/rstudio/download/#download) and
-download the latest version of RStudio for your platform (1.1.463 or later).
+download the latest version of RStudio for your platform (RStudio Desktop 2021.09.0+351).
 
 
 4. Open the downloaded file and install RStudio.
 
 
 5. Once it's installed, open RStudio to make sure it works and you don't get any error messages, and the Console window shows the
-correct version of R installed (should be 3.5.2).
+correct version of R installed.
 
 ### If you already have R and RStudio installed:
 
@@ -98,14 +97,8 @@ available, quit RStudio, and download the latest version of RStudio from the
 
 2. To check which version of R you are using, start RStudio and check the Console window. The first line that appears in the Console indicates the version of R that is running. Alternatively, you can type `sessionInfo()`, which will also display which version of R is running.
 
-3. If you are not running 3.5.2, please see Steps 1 and 2 above under "If you don't have R and RStudio installed".
+3. If you are not running R version 4.1.1 or 4.1.2, please see Steps 1 and 2 above under "If you don't have R and RStudio installed".
   * You can [check here](https://cran.r-project.org/bin/windows/base/rw-FAQ.html#How-do-I-UNinstall-R_003f) for more information on how to remove old versions from your system if you wish to do so.
-
----
-
-## Required Online Accounts
-
-You will need a [GitHub](https://github.com) account for the final day to publish your notebook. Please create an account in advance before Day 4.
 
 ---
 
@@ -121,15 +114,6 @@ You will need a [GitHub](https://github.com) account for the final day to publis
   * an empty **fig_output/** folder
   * an **img/** folder, containing images needed by the .Rmd files
   * two .R *script* files, *install_packages.R* and *load_packages.R*
-5. Part 3 of the Day 1 lesson, Understanding Data Types and Working with Vectors, can be downloaded [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/02-data-types-vectors-notebook-version.zip).
-6. Part 4 of the Day 1 lesson, R Markdown Notebooks, can be downloaded [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/03-R_Notebooks.zip).
-7. The Day 2 lesson, Starting With Data, can be downloaded [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/04-starting-with-data-notebook-version.zip). Please note - there are three files in this zip. Please put the two 04 files (the .Rmd and the .nb.html) in the **main carpentry-workshop/** directory, with the other Rmd and nb.html files. Please put the file that is in the *img/* folder from the downloaded zip (data-frame.svg) into the *img/* folder under *carpentry-workshop*.
-8. The Day 3 lesson, The Tidyverse, can be downloaded [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/05-tidyverse-notebook-version.zip). Please note - there are four files in this zip. Please put the two 05 files (the .Rmd and the .nb.html) in the **main carpentry-workshop/** directory, with the other Rmd and nb.html files. Please put the two files in the *img/* folder from the downloaded zip into the *img/* folder under *carpentry-workshop*.
-9. The Day 3 lesson for ggplot is [here](https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/06-ggplot-notebook-version.zip). Download the zip file, extract it, and move both 06 files into the **main carpentry-workshop/** directory.
-10. The Day 4 lesson on making a report can be downloaded
-[here](https://caltechlibrary.github.io/R-Carpentry/2019-03/user_downloads/Day4.zip).
-Download the zip file, extract it, and put it someplace you can find it like
-your desktop.
 
 ---
 
@@ -138,4 +122,4 @@ your desktop.
 The Caltech Library has [many books and ebooks on R](https://caltech.tind.io/yourbaskets/display_public?bskid=524), including many on the [Safari platform](https://caltech.tind.io/record/971459?ln=en).
 
 
-#### Page last updated 2019-03-19T17:09:16Z
+#### Page last updated 2021-11-01
