@@ -125,7 +125,6 @@ comprising a numeric, a character, and a logical vector.
 
 ![](./img/data-frame.svg)
 
-
 We can see this when inspecting the <b>str</b>ucture of a data frame
 with the function `str()`:
 
