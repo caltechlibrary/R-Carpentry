@@ -333,10 +333,10 @@ plot(surveys$sex)
 
 In addition to males and females, there are about 1700 individuals for which the
 sex information hasn't been recorded. Additionally, for these individuals,
-there is no label to indicate that the information is missing or undetermined. Let's rename this
-label to something more meaningful. Before doing that, we're going to pull out
-the data on sex and work with that data, so we're not modifying the working copy
-of the data frame:
+there is no label to indicate that the information is missing or undetermined. 
+Let's rename this label to something more meaningful. Before doing that, we're 
+going to pull out the data on sex and work with that data, so we're not 
+modifying the working copy of the data frame:
 
 ```{r, results=TRUE, purl=FALSE}
 sex <- surveys$sex
