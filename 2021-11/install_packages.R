@@ -7,7 +7,7 @@ following packages: base64enc, digest, evaluate, glue, highr, htmltools,
 jquerylib, jsonlite, knitr, magrittr, markdown, mime, rmarkdown, stringi, 
 stringr, tinytex, xfun, yaml. 
 
-
+install.packages("rmarkdown")
 install.packages("gridExtra") # Download and install gridExtra
 install.packages("hexbin") # Download and install hexbin
 install.packages("tidyverse") # Download and install tidyverse
