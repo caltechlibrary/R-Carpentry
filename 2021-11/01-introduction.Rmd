@@ -149,7 +149,9 @@ needs, but these should form the backbone of your working directory.
 
 For this workshop, we will need a `data/` folder to store our raw data, and we
 will use `data_output/` for when we learn how to export data as CSV files, and
-`fig_output/` folder for the figures that we will save.
+`fig_output/` folder for the figures that we will save. If you downloaded and 
+expanded the .zip file, these directories, along with a `img/` folder, should be in 
+a directory called `carpentry-workshop`.
 
 If you want to add a directory, you can do so in two ways. Let's add a folder 
 called `documents`:
