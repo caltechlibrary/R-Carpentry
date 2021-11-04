@@ -323,7 +323,6 @@ levels(sex)
 head(sex)
 ```
 
-
 > ### Challenge 3.3
 
 ### Using `stringsAsFactors=FALSE`
