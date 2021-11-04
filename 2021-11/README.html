@@ -212,7 +212,8 @@ pre code {
 <li>The Tidyverse - tidyr and dplyr</li>
 </ol>
 <p>Cheat Sheets:</p>
-<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf">Data Tidying with tidyr</a></p>
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf">Data tidying with tidyr</a></p>
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf">Data transformation with dplyr</a></p>
 <hr />
 </div>
 </div>
@@ -223,13 +224,12 @@ pre code {
 <div id="if-you-dont-have-r-and-rstudio-installed" class="section level3">
 <h3>If you don’t have R and RStudio installed:</h3>
 <ol style="list-style-type: decimal">
-<li>Download R Version 3.5.2 from the CRAN website for your operating system:</li>
+<li>Download R Version 4.1.1 or 4.1.2 from the CRAN website for your operating system:</li>
 </ol>
 <ul>
 <li><a href="http://cran.r-project.org/bin/windows/base/release.htm">Windows</a></li>
 <li><a href="http://cran.r-project.org/bin/macosx/">Mac OS</a></li>
 <li><a href="https://cloud.r-project.org/bin/linux">Linux</a> (Information provided to get the most recent version of R for common distributions.)</li>
-<li>Note that 3.5.3 is due to be released on March 11 - please do not upgrade during the workshop unless you have a pressing need to do so.</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li>Open the <code>.exe</code> (Windows) or <code>.pkg</code> (Mac) just downloaded to install R. For Linux, follow the directions given on the website for your particular distribution.</li>
@@ -238,9 +238,9 @@ pre code {
 <li>If you are a Mac user, it is also a good idea to install <a href="https://www.xquartz.org/">XQuartz</a> (needed by some R packages).</li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
-<li><p>Go to the <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio download page</a> and download the latest version of RStudio for your platform (1.1.463 or later).</p></li>
+<li><p>Go to the <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio download page</a> and download the latest version of RStudio for your platform (RStudio Desktop 2021.09.0+351).</p></li>
 <li><p>Open the downloaded file and install RStudio.</p></li>
-<li><p>Once it’s installed, open RStudio to make sure it works and you don’t get any error messages, and the Console window shows the correct version of R installed (should be 3.5.2).</p></li>
+<li><p>Once it’s installed, open RStudio to make sure it works and you don’t get any error messages, and the Console window shows the correct version of R installed.</p></li>
 </ol>
 </div>
 <div id="if-you-already-have-r-and-rstudio-installed" class="section level3">
@@ -248,7 +248,7 @@ pre code {
 <ol style="list-style-type: decimal">
 <li><p>Open RStudio, and click on “Help” &gt; “Check for updates”. If a new version is available, quit RStudio, and download the latest version of RStudio from the <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio download page</a>.</p></li>
 <li><p>To check which version of R you are using, start RStudio and check the Console window. The first line that appears in the Console indicates the version of R that is running. Alternatively, you can type <code>sessionInfo()</code>, which will also display which version of R is running.</p></li>
-<li><p>If you are not running 3.5.2, please see Steps 1 and 2 above under “If you don’t have R and RStudio installed”.</p></li>
+<li><p>If you are not running R version 4.1.1 or 4.1.2, please see Steps 1 and 2 above under “If you don’t have R and RStudio installed”.</p></li>
 </ol>
 <ul>
 <li>You can <a href="https://cran.r-project.org/bin/windows/base/rw-FAQ.html#How-do-I-UNinstall-R_003f">check here</a> for more information on how to remove old versions from your system if you wish to do so.</li>
@@ -256,42 +256,30 @@ pre code {
 <hr />
 </div>
 </div>
-<div id="required-online-accounts" class="section level2">
-<h2>Required Online Accounts</h2>
-<p>You will need a <a href="https://github.com">GitHub</a> account for the final day to publish your notebook. Please create an account in advance before Day 4.</p>
-<hr />
-</div>
 <div id="required-files" class="section level2">
 <h2>Required Files</h2>
 <ol style="list-style-type: decimal">
 <li>Create a folder somewhere on your computer to store files associated with this workshop.</li>
-<li>Please download the following .zip file into the folder to you created in Step 1: <a href="https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/carpentry-workshop.zip" class="uri">https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/carpentry-workshop.zip</a></li>
+<li>Please download the following .zip file into the folder to you created in Step 1: <a href="https://github.com/caltechlibrary/R-Carpentry/blob/master/2021-11/user_downloads/2021-11-carpentry-workshop.zip" class="uri">https://github.com/caltechlibrary/R-Carpentry/blob/master/2021-11/user_downloads/2021-11-carpentry-workshop.zip</a></li>
 <li>Open/extract the .zip file you downloaded in Step 2.</li>
-<li>You should now have, within your folder, a new folder entitled <strong>carpentry-workshop</strong>, and the following should be in that folder:</li>
+<li>You should now have, within your folder, a new folder entitled <strong>2021-11-carpentry-workshop</strong>, and the following should be in that folder:</li>
 </ol>
 <ul>
-<li>two files for <em>01-getting-started-notebook-version</em>, a .Rmd file and a .nb.html file</li>
-<li>a <strong>data/</strong> folder that contains some .csv files</li>
+<li>four .Rmd files for the lesson plans: ** <em>01-introduction.Rmd</em> ** <em>02-data-types-vectors.Rmd</em> ** <em>03-starting-with-data.Rmd</em> ** <em>04-tidyverse</em></li>
+<li>a <strong>data/</strong> folder that contains portal_data_joined.csv file</li>
 <li>an empty <strong>data_output/</strong> folder</li>
 <li>an empty <strong>fig_output/</strong> folder</li>
 <li>an <strong>img/</strong> folder, containing images needed by the .Rmd files</li>
+<li>a <strong>supplementary/</strong> folder, containing Challenge exercises and solutions along with bonus material</li>
 <li>two .R <em>script</em> files, <em>install_packages.R</em> and <em>load_packages.R</em></li>
 </ul>
-<ol start="5" style="list-style-type: decimal">
-<li>Part 3 of the Day 1 lesson, Understanding Data Types and Working with Vectors, can be downloaded <a href="https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/02-data-types-vectors-notebook-version.zip">here</a>.</li>
-<li>Part 4 of the Day 1 lesson, R Markdown Notebooks, can be downloaded <a href="https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/03-R_Notebooks.zip">here</a>.</li>
-<li>The Day 2 lesson, Starting With Data, can be downloaded <a href="https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/04-starting-with-data-notebook-version.zip">here</a>. Please note - there are three files in this zip. Please put the two 04 files (the .Rmd and the .nb.html) in the <strong>main carpentry-workshop/</strong> directory, with the other Rmd and nb.html files. Please put the file that is in the <em>img/</em> folder from the downloaded zip (data-frame.svg) into the <em>img/</em> folder under <em>carpentry-workshop</em>.</li>
-<li>The Day 3 lesson, The Tidyverse, can be downloaded <a href="https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/05-tidyverse-notebook-version.zip">here</a>. Please note - there are four files in this zip. Please put the two 05 files (the .Rmd and the .nb.html) in the <strong>main carpentry-workshop/</strong> directory, with the other Rmd and nb.html files. Please put the two files in the <em>img/</em> folder from the downloaded zip into the <em>img/</em> folder under <em>carpentry-workshop</em>.</li>
-<li>The Day 3 lesson for ggplot is <a href="https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/06-ggplot-notebook-version.zip">here</a>. Download the zip file, extract it, and move both 06 files into the <strong>main carpentry-workshop/</strong> directory.</li>
-<li>The Day 4 lesson on making a report can be downloaded <a href="https://caltechlibrary.github.io/R-Carpentry/2019-03/user_downloads/Day4.zip">here</a>. Download the zip file, extract it, and put it someplace you can find it like your desktop.</li>
-</ol>
 <hr />
 </div>
 <div id="resources" class="section level2">
 <h2>Resources</h2>
-<p>The Caltech Library has <a href="https://caltech.tind.io/yourbaskets/display_public?bskid=524">many books and ebooks on R</a>, including many on the <a href="https://caltech.tind.io/record/971459?ln=en">Safari platform</a>.</p>
-<div id="page-last-updated-2019-03-19t170916z" class="section level4">
-<h4>Page last updated 2019-03-19T17:09:16Z</h4>
+<p>The Caltech Library has <a href="https://search.ebscohost.com/login.aspx?direct=true&amp;AuthType=ip,sso&amp;bquery=R+programming&amp;cli0=FT1&amp;clv0=Y&amp;type=1&amp;searchMode=And&amp;site=eds-live&amp;scope=site&amp;custid=s8984125&amp;groupid=main&amp;profile=eds">many books and ebooks on R</a>, including many on the <a href="https://search.ebscohost.com/login.aspx?direct=true&amp;AuthType=ip,sso&amp;db=cat08655a&amp;AN=clc.873aa4f7.3003.456e.afec.8f394b2ad7ce&amp;site=eds-live&amp;scope=site&amp;custid=s8984125&amp;groupid=main&amp;profile=eds">Safari platform</a> (link requires Caltech credentials to view).</p>
+<div id="page-last-updated-2021-11-04" class="section level4">
+<h4>Page last updated 2021-11-04</h4>
 </div>
 </div>
 </div>

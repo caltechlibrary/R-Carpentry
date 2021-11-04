@@ -105,21 +105,22 @@ available, quit RStudio, and download the latest version of RStudio from the
 ## Required Files
 
 1. Create a folder somewhere on your computer to store files associated with this workshop.
-2. Please download the following .zip file into the folder to you created in Step 1: https://github.com/caltechlibrary/R-Carpentry/blob/master/2019-03/user_downloads/carpentry-workshop.zip
+2. Please download the following .zip file into the folder to you created in Step 1: https://github.com/caltechlibrary/R-Carpentry/blob/master/2021-11/user_downloads/2021-11-carpentry-workshop.zip
 3. Open/extract the .zip file you downloaded in Step 2.
-4. You should now have, within your folder, a new folder entitled **carpentry-workshop**, and the following should be in that folder:
-  * two files for *01-getting-started-notebook-version*, a .Rmd file and a .nb.html file
-  * a **data/** folder that contains some .csv files
+4. You should now have, within your folder, a new folder entitled **2021-11-carpentry-workshop**, and the following should be in that folder:
+  * four .Rmd files for the lesson plans: 01-introduction.Rmd; 02-data-types-vectors.Rmd; 03-starting-with-data.Rmd; 04-tidyverse
+  * a **data/** folder that contains portal_data_joined.csv file
   * an empty **data_output/** folder
   * an empty **fig_output/** folder
   * an **img/** folder, containing images needed by the .Rmd files
+  * a **supplementary/** folder, containing Challenge exercises and solutions along with bonus material
   * two .R *script* files, *install_packages.R* and *load_packages.R*
 
 ---
 
 ## Resources
 
-The Caltech Library has [many books and ebooks on R](https://caltech.tind.io/yourbaskets/display_public?bskid=524), including many on the [Safari platform](https://caltech.tind.io/record/971459?ln=en).
+The Caltech Library has [many books and ebooks on R](https://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,sso&bquery=R+programming&cli0=FT1&clv0=Y&type=1&searchMode=And&site=eds-live&scope=site&custid=s8984125&groupid=main&profile=eds), including many on the [Safari platform](https://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,sso&db=cat08655a&AN=clc.873aa4f7.3003.456e.afec.8f394b2ad7ce&site=eds-live&scope=site&custid=s8984125&groupid=main&profile=eds) (link requires Caltech credentials to view).
 
 
-#### Page last updated 2021-11-01
+#### Page last updated 2021-11-04
