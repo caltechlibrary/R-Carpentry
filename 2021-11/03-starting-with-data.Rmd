@@ -64,17 +64,17 @@ contains the survey data from Figshare. Inside the download.file command,
 the first entry is a character string with the source URL 
 ("https://ndownloader.figshare.com/files/2292169"). This source URL 
 downloads a CSV file from Figshare. The text after the comma 
-("data/portal_data_joined.csv") is the destination of the file on your local 
+("data_raw/portal_data_joined.csv") is the destination of the file on your local 
 machine. You'll need to have a folder
-on your machine called "data" where you'll download the file. So this 
+on your machine called "data_raw" where you'll download the file. So this 
 command downloads a file from figshare, names it "portal_data_joined.csv," 
-and adds it to a preexisting folder named "data."
+and adds it to a preexisting folder named "data_raw."
 
 Do not run this code chuck - for example only!
 
 ```{r, eval=FALSE, purl=FALSE}
 # download.file(url="https://ndownloader.figshare.com/files/2292169",
-#              destfile = "data/portal_data_joined.csv")
+#              destfile = "data_raw/portal_data_joined.csv")
 ```
 
 ### Reading the data into R
@@ -87,7 +87,7 @@ Now, we will use `read_csv()` to load into memory the content of the CSV file as
 an object of class `data.frame` (you CAN run this code chunk):
 
 ```{r, eval=FALSE, purl=FALSE, echo=TRUE}
-surveys <- read_csv("data/portal_data_joined.csv")
+surveys <- read_csv("data_raw/portal_data_joined.csv")
 ```
 
 When you execute `read_csv` on a data file, it looks through the first 1000 rows of each column and guesses its data type. For example, in this dataset, `read_csv()` reads `weight` as `col_double` (a numeric data type), and species as `col_character`. You have the option to specify the data type for a column manually by using the `col_types` argument in `read_csv`.
