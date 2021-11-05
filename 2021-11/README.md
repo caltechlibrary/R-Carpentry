@@ -105,7 +105,7 @@ available, quit RStudio, and download the latest version of RStudio from the
 ## Required Files
 
 1. Create a folder somewhere on your computer to store files associated with this workshop.
-2. Please download the following .zip file into the folder to you created in Step 1: https://github.com/caltechlibrary/R-Carpentry/blob/master/2021-11/user_downloads/2021-11-carpentry-workshop.zip
+2. Please download the following .zip file into the folder to you created in Step 1: [https://github.com/caltechlibrary/R-Carpentry/blob/master/2021-11/user_downloads/2021-11-carpentry-workshop.zip](https://github.com/caltechlibrary/R-Carpentry/blob/master/2021-11/user_downloads/2011-11-carpentry-workshop.zip)
 3. Open/extract the .zip file you downloaded in Step 2.
 4. You should now have, within your folder, a new folder entitled **2021-11-carpentry-workshop**, and the following should be in that folder:
   * four .Rmd files for the lesson plans: 01-introduction.Rmd; 02-data-types-vectors.Rmd; 03-starting-with-data.Rmd; 04-tidyverse.Rmd
