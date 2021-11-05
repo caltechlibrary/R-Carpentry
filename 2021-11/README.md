@@ -109,7 +109,7 @@ available, quit RStudio, and download the latest version of RStudio from the
 3. Open/extract the .zip file you downloaded in Step 2.
 4. You should now have, within your folder, a new folder entitled **2021-11-carpentry-workshop**, and the following should be in that folder:
   * four .Rmd files for the lesson plans: 01-introduction.Rmd; 02-data-types-vectors.Rmd; 03-starting-with-data.Rmd; 04-tidyverse
-  * a **data/** folder that contains portal_data_joined.csv file
+  * a **data_raw/** folder that contains portal_data_joined.csv file
   * an empty **data_output/** folder
   * an empty **fig_output/** folder
   * an **img/** folder, containing images needed by the .Rmd files
