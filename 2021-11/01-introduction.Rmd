@@ -53,7 +53,6 @@ workshop.
 
 ![**RStudio interface screenshot. Clockwise from top left: Source, Environment/History, Files/Plots/Packages/Help/Viewer, Console.**](img/rstudio-screenshot.png)
 
-
 RStudio is divided into 4 "Panes": the **Source** for your scripts and documents
 (top-left, in the default layout), your **Environment/History** (top-right),
 your **Files/Plots/Packages/Help/Viewer** (bottom-right), and 
