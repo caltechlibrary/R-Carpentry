@@ -83,13 +83,13 @@ to check out this
 
 As before, we read in our data using the `read_csv()` function, from the tidyverse package **`readr`**.
 
-```{r load_surveys, eval=FALSE, purl=FALSE, echo=TRUE}
-surveys <- read_csv("data/portal_data_joined.csv")
+```{r load_surveys, eval=TRUE, purl=FALSE, echo=TRUE}
+surveys <- read_csv("data_raw/portal_data_joined.csv")
 ```
 
 Let's see what the format of our data is using str() - what does str() stand for?
 
-```{r str_surveys, eval=FALSE, purl=FALSE, echo=TRUE}
+```{r str_surveys, eval=TRUE, purl=FALSE, echo=TRUE}
 str(surveys)
 ```
 
@@ -557,7 +557,7 @@ We are going to prepare a cleaned up version of the data set that doesn't includ
 
 Let's start by removing observations of animals for which `weight` and `hindfoot_length` are missing, or the `sex` has not been determined:
 
-```{r, eval=FALSE, purl=FALSE, echo=TRUE}
+```{r, eval=TRUE, purl=FALSE, echo=TRUE}
 surveys_complete <- surveys %>%
   filter(!is.na(weight),           # remove missing weight
          !is.na(hindfoot_length),  # remove missing hindfoot_length
@@ -573,7 +573,7 @@ observations for these more common species.
 
 First, extract the most common species_id:
 
-```{r, eval=FALSE, purl=FALSE, echo=TRUE}
+```{r, eval=TRUE, purl=FALSE, echo=TRUE}
 species_counts <- surveys_complete %>%
     count(species_id) %>% 
     filter(n >= 50)
@@ -581,7 +581,7 @@ species_counts <- surveys_complete %>%
 
 Next, only keep the most common species:
 
-```{r, eval=FALSE, purl=FALSE, echo=TRUE}
+```{r, eval=TRUE, purl=FALSE, echo=TRUE}
 surveys_complete <- surveys_complete %>%
   filter(species_id %in% species_counts$species_id)
 ```
@@ -592,5 +592,5 @@ Now that our data set is ready, we can save it as a CSV file in our `data_output
 folder:
 
 ```{r, purl=FALSE, eval=TRUE, echo=FALSE}
-write_csv(surveys_complete, path = "data_output/surveys_complete.csv")
+write_csv(surveys_complete, file = "data_output/surveys_complete.csv")
 ```
