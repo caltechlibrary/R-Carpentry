@@ -5,72 +5,61 @@ date: "11/4/2021"
 output: html_document
 ---
 
-> ### Challenge 3.1
->
-> Based on the output of `str(surveys)`, can you answer the following questions?
->
-> * What is the class of the object `surveys`?
-> * How many rows and how many columns are in this object?
-> * How many species have been recorded during these surveys?
+# Challenge 3.1
 
-> ### Challenge 3.2
->
-> 1. Create a `data.frame` (`surveys_200`) containing only the data in
->    row 200 of the `surveys` dataset.
->
-> 2. Notice how `nrow()` gave you the number of rows in a `data.frame`?
->
->      * Use that number to pull out just that last row in the data frame.
->      * Compare that with what you see as the last row using `tail()` to make
->        sure it's meeting expectations.
->      * Pull out that last row using `nrow()` instead of the row number.
->      * Create a new data frame (`surveys_last`) from that last row.
->
-> 3. Use `nrow()` to extract the row that is in the middle of the data
->    frame. Store the content of this row in an object named `surveys_middle`.
->
-> 4. Combine `nrow()` with the `-` notation above to reproduce the behavior of
->    `head(surveys)`, keeping just the first through 6th rows of the surveys
->    dataset.
+Based on the output of `str(surveys)`, can you answer the following questions?
 
-### Challenge 3.3. Answer:
+* What is the class of the object `surveys`?
+* How many rows and how many columns are in this object?
 
-## 1.
-surveys_200 <- surveys[200, ]
-## 2.
-# Saving `n_rows` to improve readability and reduce duplication
+## Answer
+
+* class: data frame
+* how many rows: 34786,  how many columns: 13
+
+# Challenge 3.2
+
+1. Create a `data.frame` (name it `surveys_200`) containing only the data in row 200 of the `surveys` dataset.
+
+2. Notice how `nrow()` gave you the number of rows in a `data.frame`?
+* Use that number to pull out just that last row in the data frame.
+* Compare that with what you see as the last row using `tail()` to make sure it's meeting expectations.
+* Pull out that last row using `nrow()` instead of the row number.
+* Create a new data frame (`surveys_last`) from that last row.
+
+3. Use `nrow()` to extract the row that is in the middle of the data frame. Store the content of this row in an object named `surveys_middle`.
+
+4. Combine `nrow()` with the `-` notation above to reproduce the behavior of `head(surveys)`, keeping just the first through 6th rows of the surveys dataset.
+
+## Answer
+1. surveys_200 <- surveys[200, ]
+2. Saving `n_rows` to improve readability and reduce duplication:
 n_rows <- nrow(surveys)
 surveys_last <- surveys[n_rows, ]
-## 3.
-surveys_middle <- surveys[n_rows / 2, ]
-## 4.
-surveys_head <- surveys[-(7:n_rows), ]> ### Challenge 3.3
+3. surveys_middle <- surveys[n_rows / 2, ]
+4. surveys_head <- surveys[-(7:n_rows), ]
 
 # Challenge 3.3
 
-Change the columns taxa and genus in the surveys data frame into a factor.
+1. Change the columns `taxa` and `genus` in the `surveys` data frame into a factor.
+2. Using the functions you learned before, can you find out…
+* How many rabbits were observed?
+* How many different genera are in the genus column?
 
-Using the functions you learned before, can you find out…
-
-How many rabbits were observed?
-How many different genera are in the genus column?
-
-Answer:
+## Answer
 surveys$taxa <- factor(surveys$taxa)
 surveys$genus <- factor(surveys$genus)
 summary(surveys)
 nlevels(surveys$genus)
 
-## * how many genera: There are 26 unique genera in the `genus` column.
-## * how many rabbts: There are 75 rabbits in the `taxa` column.
+* how many genera: There are 26 unique genera in the `genus` column.
+* how many rabbts: There are 75 rabbits in the `taxa` column.
 
-> ### Challenge 3.4
+# Challenge 3.4
+
+1. We have seen how data frames are created when using `read.csv()`, but they can also be created by hand with the `data.frame()` function. There are a few mistakes in this hand-crafted `data.frame`. Can you spot and fix them? Don't hesitate to experiment!
+
 >
-> 1. We have seen how data frames are created when using `read.csv()`, but
->   they can also be created by hand with the `data.frame()` function.  There are
->   a few mistakes in this hand-crafted `data.frame`. Can you spot and fix them?
->   Don't hesitate to experiment!
-
 ```{r}
 animal_data <- data.frame(
                animal = c(dog, cat, sea cucumber, sea urchin),
@@ -79,13 +68,9 @@ animal_data <- data.frame(
                )
 ```
 
-> 2. Can you predict the class for each of the columns in the following example?
->    Check your guesses using `str(country_climate)`:
->      * Are they what you expected?  Why? Why not?
->      * What would have been different if we had 
->         added `stringsAsFactors = FALSE` when creating the data frame?
->      * What would you need to change to ensure that each column had the accurate 
->         data type?
+2. Can you predict the class for each of the columns in the following example? Check your guesses using `str(country_climate)`:
+* Are they what you expected?  Why? Why not?
+* What would you need to change to ensure that each column had the accurate data type?
 
 ```{r}
      country_climate <- data.frame(
@@ -96,3 +81,15 @@ animal_data <- data.frame(
             has_kangaroo = c(FALSE, FALSE, FALSE, 1)
           )
 ```
+
+## Answer
+1. 
+* missing quotations around the names of the animals
+* missing one entry in the feel column (probably for one of the furry animals)
+* missing one comma in the weight column
+
+2.
+* country, climate, temperature, and northern_hemisphere are characters; has_kangaroo is numeric
+* using factor() one could replace character columns with factors columns
+* removing the quotes in temperature and northern_hemisphere and replacing 1 by TRUE in the has_kangaroo column would give what was probably intended
+

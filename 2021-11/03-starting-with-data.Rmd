@@ -286,7 +286,7 @@ Factors, on the other hand, have this information built in. It is
 particularly helpful when there are many levels (like the species names 
 in our example dataset).
 
-> # Challenge 3.3
+> ### Challenge 3.3
 
 ### Converting factors
 
@@ -360,6 +360,8 @@ Now we can plot the data again, using `plot(sex)`.
 ```{r, purl=TRUE}
 plot(sex)
 ```
+
+> ### Challenge 3.4
 
 The automatic conversion of data type is sometimes a blessing, sometimes an
 annoyance. Be aware that it exists, learn the rules, and double check that data
