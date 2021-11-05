@@ -588,9 +588,9 @@ surveys_complete <- surveys_complete %>%
 
 To make sure that everyone has the same data set, check that `surveys_complete` has 30463 rows and 13 columns by typing `dim(surveys_complete)`.
 
-Now that our data set is ready, we can save it as a CSV file in our `data_output`
+Now that our data set is ready, we can save it as a CSV file in our `data`
 folder:
 
 ```{r, purl=FALSE, eval=TRUE, echo=FALSE}
-write_csv(surveys_complete, file = "data_output/surveys_complete.csv")
+write_csv(surveys_complete, file = "data/surveys_complete.csv")
 ```
