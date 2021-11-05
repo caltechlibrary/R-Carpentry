@@ -68,11 +68,17 @@ Do not run this code chuck - for example only!
 #              destfile = "data/portal_data_joined.csv")
 ```
 
-Now, we will use `read.csv()` to load into memory the content of the CSV file as 
+### Reading the data into R
+
+The file has now been downloaded to the destination you specified, but R has not yet loaded the data from the file into memory. To do this, we can use the `read_csv()` function from the `tidyverse` package.
+
+Packages in R are basically sets of additional functions that let you do more stuff. The functions we’ve been using so far, like `round()`, `sqrt()`, or `c()` come built into R. Packages give you access to additional functions beyond base R. A similar function to `read_csv()` from the tidyverse package is `read.csv()` from base R. We don’t have time to cover their differences but notice that the exact spelling determines which function is used. Before you use a package for the first time you need to install it on your machine, and then you should import it in every subsequent R session when you need it.
+
+Now, we will use `read_csv()` to load into memory the content of the CSV file as 
 an object of class `data.frame` (you CAN run this code chunk):
 
 ```{r, eval=TRUE,  purl=FALSE}
-surveys <- read.csv("data/portal_data_joined.csv")
+surveys <- read_csv("data/portal_data_joined.csv")
 ```
 
 This statement doesn't produce any output because, as you might recall,
@@ -229,6 +235,10 @@ instance, if you have a factor with 2 levels:
 
 ```{r, purl=TRUE}
 sex <- factor(c("male", "female", "female", "male"))
+```
+
+```{r, purl=TRUE}
+surveys$sex <- factor(surveys$sex)
 ```
 
 R will assign `1` to the level `"female"` and `2` to the level `"male"` (because

@@ -55,6 +55,9 @@ mass_index <- mass/age  # mass_index?
 >   types. Can you draw a diagram that represents the hierarchy of how
 >   these data types are coerced?
 
+> ### Challenge (optional)
+> ##
+> ## * Can you figure out why `"four" > "five"` returns `TRUE`?
 
 > ### Challenge 2.3
 >
