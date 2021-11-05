@@ -33,11 +33,36 @@ output: html_document
 >    `head(surveys)`, keeping just the first through 6th rows of the surveys
 >    dataset.
 
-> ### Challenge 3.3
->
-> * Rename "F" and "M" to "female" and "male" respectively.
-> * Now that we have renamed the factor level to "undetermined", can you recreate 
-> the barplot such that "undetermined" is last (after "male")?
+### Challenge 3.3. Answer:
+
+## 1.
+surveys_200 <- surveys[200, ]
+## 2.
+# Saving `n_rows` to improve readability and reduce duplication
+n_rows <- nrow(surveys)
+surveys_last <- surveys[n_rows, ]
+## 3.
+surveys_middle <- surveys[n_rows / 2, ]
+## 4.
+surveys_head <- surveys[-(7:n_rows), ]> ### Challenge 3.3
+
+# Challenge 3.3
+
+Change the columns taxa and genus in the surveys data frame into a factor.
+
+Using the functions you learned before, can you find out…
+
+How many rabbits were observed?
+How many different genera are in the genus column?
+
+Answer:
+surveys$taxa <- factor(surveys$taxa)
+surveys$genus <- factor(surveys$genus)
+summary(surveys)
+nlevels(surveys$genus)
+
+## * how many genera: There are 26 unique genera in the `genus` column.
+## * how many rabbts: There are 75 rabbits in the `taxa` column.
 
 > ### Challenge 3.4
 >
