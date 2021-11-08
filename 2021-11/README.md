@@ -111,7 +111,7 @@ available, quit RStudio, and download the latest version of RStudio from the
   * four .Rmd files for the lesson plans: 01-introduction.Rmd; 02-data-types-vectors.Rmd; 03-starting-with-data.Rmd; 04-tidyverse.Rmd
   * four .html file versions of the lesson plans: 01-introduction.html; 02-data-types-vectors.html; 03-starting-with-data.htm; 04-tidyverse.html
   * a **data_raw/** folder that contains portal_data_joined.csv file
-  * an empty **data_output/** folder
+  * an empty **data/** folder
   * an empty **fig_output/** folder
   * an **img/** folder, containing images needed by the .Rmd files
   * a **supplementary/** folder, containing Challenge exercises and solutions along with bonus material
