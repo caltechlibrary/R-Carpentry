@@ -21,7 +21,7 @@ Data Carpentry R for Social Scientists lesson and the [Modifying Document Appear
 **Please note that this class assumes prior knowledge of, or experience with, R or RStudio. If you are not sure if this
 class will be appropriate for you, please look over the lesson content above, or email the Instructors.**
 
-### Day 1 (February 2, 10:45am - 12:15pm)
+### Day 1 (February 2, 11:00am - 12:00pm)
 
 1. Introduction to R Markdown
 2. R Markdown Suntax
@@ -35,7 +35,7 @@ Cheat Sheets:
 
 [R Markdown](https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown.pdf)
 
-### Day 2 (November 9, 10am - 11am)
+### Day 2 (February 3, 11:00am - 12:00pm)
 
 4. R Markdown Outputs
 5. References
