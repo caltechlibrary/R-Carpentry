@@ -24,7 +24,7 @@ class will be appropriate for you, please look over the lesson content above, or
 ### Day 1 (February 2, 11:00am - 12:00pm)
 
 1. Introduction to R Markdown
-2. R Markdown Suntax
+2. R Markdown Syntax
 3. Inserting Dynamic Content into R Markdown 
 
 Cheat Sheets:
@@ -102,6 +102,6 @@ available, quit RStudio, and download the latest version of RStudio from the
 
 ## Resources
 
-The Caltech Library has [many books and ebooks on R](https://caltech.tind.io/yourbaskets/display_public?bskid=524), including many on the [Safari platform](https://caltech.tind.io/record/971459?ln=en).
+The Caltech Library has [many books and ebooks on R](https://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,sso&bquery=R+programming&cli0=FT1&clv0=Y&type=1&searchMode=And&site=eds-live&scope=site&custid=s8984125&groupid=main&profile=eds), including many on the [Safari platform](https://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,sso&db=cat08655a&AN=clc.873aa4f7.3003.456e.afec.8f394b2ad7ce&site=eds-live&scope=site&custid=s8984125&groupid=main&profile=eds) (link requires Caltech credentials to view).
 
 #### Page last updated 2022-01-14
