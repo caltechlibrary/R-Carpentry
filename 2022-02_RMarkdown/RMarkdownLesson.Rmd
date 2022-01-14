@@ -1,24 +1,9 @@
 ---
-title: "Getting started with R Markdown (Optional)"
+title: "Getting started with R Markdown"
 teaching: 30
 exercises: 15
 output: 
-  html_document:
-    df_print: paged
-objectives:
-- Create a .Rmd document containing R code, text, and plots
-- Create a YAML header to control output
-- Understand basic syntax of (R)Markdown
-- Customise code chunks to control formatting
-- Use code chunks and in-line code to create dynamic, reproducible documents
-keypoints: 
-- R Markdown is a useful language for creating reproducible documents combining text and executable R-code.
-- Specify chunk options to control formatting of the output document
-source: Rmd
-questions:
-- What is R Markdown?
-- How can I integrate my R code with text and plots?
-- How can I convert .Rmd files to .html?
+  html_document
 ---
 
 ```{r setup, include = FALSE}
@@ -248,7 +233,6 @@ interviews <- read_csv(here("data/SAFI_clean.csv"), na = "NULL")
 >
 > As suggested in the Starting with Data episode, we highly recommend the use of
 the `here()` function to keep the file paths consistent within your project.
-{: .callout}
 
 
 ## Insert table
@@ -309,26 +293,6 @@ commas, e.g. `{r chunk-name, eval = FALSE, echo = TRUE}`.
 > `knitr::opts_chunk$set()`,
 > - Entering `knitr::opts_chunk$set(echo = FALSE)` will change the default of
 > value of `echo` to `FALSE` for **every** code chunk in the document.
-{: .callout}
-
-
-> ## Exercise
->
-> Play around with the different options in the chunk with the code for the 
-> table, and re-**Knit** to see what each option does to the output.
->
-> What happens if you use `eval = FALSE` and `echo = FALSE`? What is the
-> difference between this and `include = FALSE`? 
-> > ## Solution to Exercise
-> > 
-> > Create a chunk with `{r eval = FALSE, echo = FALSE}`, then create another
-> > chunk with `{r include = FALSE}` to compare.
-> > `eval = FALSE` and `echo = FALSE` will neither run the code in the chunk,
-> > nor show the code in the knitted document. The code chunk essentially
-> > doesn't exist in the knitted document as it was never run. Whereas
-> > `include = FALSE` will run the code and store the output for later use.
-> {: .solution}
-{: .challenge}
 
 
 ## In-line R code
@@ -407,25 +371,6 @@ interviews_plotting <- interviews %>%
   mutate(number_items = rowSums(select(., bicycle:car)))
 ```
 
-> ## Exercise
->
-> Create a new code chunk for the plot, and copy the code from any of the plots 
-> we created in the previous episode to produce a plot in the chunk. I recommend
-> one of the colourful plots.
->
-> If you are feeling adventurous, you can also create a new plot with the
-> `interviews_plotting` data frame.
->
-> > ## Solution to Exercise
-> > ```{r my-fancy-plot, answer = TRUE, purl = FALSE}
-> > interviews_plotting %>%
-> >   ggplot(aes(x = respondent_wall_type)) +
-> >   geom_bar(aes(fill = village))
-> > ```
-> {: .solution}
-{: .challenge}
-
-
 We can also create a caption with the chunk option `fig.cap`.
 
 <pre>
@@ -471,8 +416,90 @@ output: word_document
 > produce the pdf document. Visit the [tinytex website](https://yihui.org/tinytex/) 
 > for more information.
 >
-{: .callout}
 
+
+## References
+
+References are another area of document preparation where automation is really
+helpful. References in `knitr` are handled with BibTeX files (.bib). BibTeX is
+a reasonably standard reference citation format that can be produced by most
+reference managers and online services. We've provided the bibliography file
+`oajournals.bib` for you to work with during this course.
+
+References are handled in the `bibliography` section of the YAML header. Add
+the following to the YAML in our document:
+
+```
+bibliography: oajournals.bib
+```
+
+This tells `knitr` to use the `oajournals.bib` file for citations in the
+document.
+
+Let's open the `oajournals.bib` file and see what it looks like.  You'll see
+citation information about each article in groups indicated by a document type
+tag, e.g., `@article`, followed by a unique citation key (typically the last
+name of an author and the year of publication, e.g. Young_2015), followed by
+citation information. If you look at the exercise document, you'll note that
+all of the citations have thus far been written manually (e.g., Castro et al
+(2017)). We'll want to replace them by these (machine readable) document type
+tags that `knitr` will be able to combine into a Reference List at the end of
+the report.  We use the **@** symbol to indicate a reference, so we need to
+replace each reference with the appropriate tag, for example `@Castro_2017`.
+
+The reference list is automatically added to the end of the document, so we can
+delete the dummy references that were there. You'll notice that
+`Vasilevsky_2017` showed up in the text as `n.d.`, even though it's in the
+reference list.  If we look in the BibTex file, we see that no authors and date
+are defined for this reference. `knitr` tries its best, but won't correct or
+complete references if the proper data is not available in the `.bib` file.
+
+Let's fix the problem by grabbing a correct .bib file.  One great source is the
+DOI registration agencies. Put the DOI for `Vasilevsky_2017`,
+`10.7717/peerj.3208` into the [Cross Cite DOI Citation Formatter
+service](https://citation.crosscite.org/) and select **bibtex** as the citation
+style. Copy the BibTeX code into oajournals.bib, change the long default
+citation key to `Vasilevsky_2017`, and check that the citation is now correct.
+
+The citation style defaults to Chicago.  If you want a different citation
+style, you can download a csl style file from the
+[Zotero style registry](https://www.zotero.org/styles).  Download your favorite
+citation style and put it in your directory. You add the citation
+style file by using the csl section of the YAML (this is a new section, like
+bibliography):
+
+```
+csl: american-chemical-society.csl
+```
+
+After knitting, you'll see the citation style change.
+
+## Embedded Sub-Documents and Math
+
+To date we've been writing everything in one R Markdown document. We can
+actually build our document from sub-documents that `knitr` will integrate into
+the output. The sub-documents (aka child documents) do not have to contain a
+complete YAML header because they are designed to be integrated into the
+'main document' or 'parent' at knit time.
+
+To see how this works, find a document in your folder called
+`equations-child.Rmd`. You can see that this file has a minimal header followed
+by some R Markdown text. You'll also see some equations written in LaTeX. That's
+right; you can write LaTeX within an R Markdown document and it will get
+correctly formatted at knit time! :D
+
+Let's add the child document at the end of the 'Project Description'.  You
+add child documents with a code chunk, and include the document location in the
+label, for example: `{r equations, child = "equations-child.Rmd"}`.
+
+When you knit you get nicely formatted equations, in both HTML and Word.
+
+Using multiple child-documents is a convenient and tidy way to manage multiple
+sections in a single long report. Each section can be authored and tested
+separately without bogging `knitr` down with one long scrolling document.
+Additionally, if just one section needs to be changed or updated over time,
+the parent-child authoring approach isolates the change to the necessary file
+without opening (and possibly inadvertently introducing errors) to the longer parent.
 
 ## Resources
 
