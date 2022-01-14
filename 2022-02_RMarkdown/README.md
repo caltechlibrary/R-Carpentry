@@ -59,24 +59,25 @@ development environment (IDE) that makes using R easier and more interactive.
 
 ### If you don't have R and RStudio installed:
 
-1. Download R Version 4.1.1 from the CRAN website for your operating system:
-  * [Windows](https://cran.r-project.org/bin/windows/base/release.htm)
-  * [Mac OS](https://cran.r-project.org/bin/macosx/) - pay attention to which processor version you need!
+1. Download R Version 4.1.1 or 4.1.2 from the CRAN website for your operating system:
+  * [Windows](http://cran.r-project.org/bin/windows/base/release.htm)
+  * [Mac OS](http://cran.r-project.org/bin/macosx/)
   * [Linux](https://cloud.r-project.org/bin/linux) (Information provided to get the most recent version of R for common distributions.)
-  * Please note that version 4.1.2 is due to be released on November 1. Please use 4.1.1 unless you have a pressing need to upgrade.
+
 
 2. Open the `.exe` (Windows) or `.pkg` (Mac) just downloaded to install R. For Linux, follow the
 directions given on the website for your particular distribution.
   * If you are a Mac user, it is also a good idea to install [XQuartz](https://www.xquartz.org/) (needed by some R packages).
 
+
 3. Go to the [RStudio download page](https://www.rstudio.com/products/rstudio/download/#download) and
-download the latest version of RStudio for your platform (2021.09.0+351 or later).
+download the latest version of RStudio for your platform (RStudio Desktop 2021.09.0+351).
+
 
 4. Open the downloaded file and install RStudio.
 
 5. Once it's installed, open RStudio to make sure it works and you don't get any error messages, and the Console window shows the
-correct version of R installed (should be 4.4.1).
-
+correct version of R installed.
 
 ### If you already have R and RStudio installed:
 
@@ -86,9 +87,8 @@ available, quit RStudio, and download the latest version of RStudio from the
 
 2. To check which version of R you are using, start RStudio and check the Console window. The first line that appears in the Console indicates the version of R that is running. Alternatively, you can type `sessionInfo()`, which will also display which version of R is running.
 
-3. If you are not running 4.1.1, please see Steps 1 and 2 above under "If you don't have R and RStudio installed".
+3. If you are not running R version 4.1.1 or 4.1.2, please see Steps 1 and 2 above under "If you don't have R and RStudio installed".
   * You can [check here](https://cran.r-project.org/bin/windows/base/rw-FAQ.html#How-do-I-UNinstall-R_003f) for more information on how to remove old versions from your system if you wish to do so.
-
 ---
 
 ## Required Files
