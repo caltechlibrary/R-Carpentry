@@ -484,7 +484,7 @@ by some R Markdown text. You'll also see some equations written in LaTeX. That's
 right; you can write LaTeX within an R Markdown document and it will get
 correctly formatted at knit time! :D
 
-Let's add the child document at the end of the 'Project Description'.  You
+Let's add the child document at the end of the .Rmd file  You
 add child documents with a code chunk, and include the document location in the
 label, for example: `{r equations, child = "equations-child.Rmd"}`.
 
