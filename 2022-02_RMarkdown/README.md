@@ -59,7 +59,7 @@ development environment (IDE) that makes using R easier and more interactive.
 
 ### If you don't have R and RStudio installed:
 
-1. Download R Version 4.1.1 or 4.1.2 from the CRAN website for your operating system:
+1. Download R Version 4.1.2 from the CRAN website for your operating system:
   * [Windows](http://cran.r-project.org/bin/windows/base/release.htm)
   * [Mac OS](http://cran.r-project.org/bin/macosx/)
   * [Linux](https://cloud.r-project.org/bin/linux) (Information provided to get the most recent version of R for common distributions.)
@@ -87,8 +87,9 @@ available, quit RStudio, and download the latest version of RStudio from the
 
 2. To check which version of R you are using, start RStudio and check the Console window. The first line that appears in the Console indicates the version of R that is running. Alternatively, you can type `sessionInfo()`, which will also display which version of R is running.
 
-3. If you are not running R version 4.1.1 or 4.1.2, please see Steps 1 and 2 above under "If you don't have R and RStudio installed".
+3. If you are not running R version 4.1.2, please see Steps 1 and 2 above under "If you don't have R and RStudio installed".
   * You can [check here](https://cran.r-project.org/bin/windows/base/rw-FAQ.html#How-do-I-UNinstall-R_003f) for more information on how to remove old versions from your system if you wish to do so.
+  
 ---
 
 ## Required Files
