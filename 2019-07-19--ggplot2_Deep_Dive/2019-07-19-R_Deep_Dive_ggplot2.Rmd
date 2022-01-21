@@ -1,7 +1,9 @@
 ---
 title: "R Deep Dive with ggplot2"
 Date: July 19, 2019
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 # 1 - Introduction - About R Notebooks
