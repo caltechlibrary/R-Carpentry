@@ -20,7 +20,7 @@ The lesson is designed to be taught online in approximately 2 hours, following a
 **Please note that this class assumes prior knowledge of, or experience with, R or RStudio. If you are not sure if this
 class will be appropriate for you, please look over the lesson content above, or email the Instructors.**
 
-### Day 1 (Jamuary 31, 11:00am - 12:00pm)
+### Day 1 (January 31, 11:00am - 12:00pm)
 
 ### Day 2 (February 1, 11:00am - 12:00pm)
 
