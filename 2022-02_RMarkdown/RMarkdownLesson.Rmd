@@ -424,10 +424,10 @@ References are another area of document preparation where automation is really
 helpful. References in `knitr` are handled with BibTeX files (.bib). BibTeX is
 a reasonably standard reference citation format that can be produced by most
 reference managers and online services. We've provided the bibliography file
-`oajournals.bib` for you to work with during this course.
+`oajournals.bib` for you to work with.
 
 References are handled in the `bibliography` section of the YAML header. Add
-the following to the YAML in our document:
+the following to the YAML in the document:
 
 ```
 bibliography: oajournals.bib
@@ -445,21 +445,17 @@ all of the citations have thus far been written manually (e.g., Castro et al
 (2017)). We'll want to replace them by these (machine readable) document type
 tags that `knitr` will be able to combine into a Reference List at the end of
 the report.  We use the **@** symbol to indicate a reference, so we need to
-replace each reference with the appropriate tag, for example `@Castro_2017`.
+replace each reference with the appropriate tag, for example `@Vasilevsky_2017`.
 
-The reference list is automatically added to the end of the document, so we can
-delete the dummy references that were there. You'll notice that
+The reference list will automatically added to the end of the document. You'll notice that
 `Vasilevsky_2017` showed up in the text as `n.d.`, even though it's in the
 reference list.  If we look in the BibTex file, we see that no authors and date
 are defined for this reference. `knitr` tries its best, but won't correct or
 complete references if the proper data is not available in the `.bib` file.
 
-Let's fix the problem by grabbing a correct .bib file.  One great source is the
-DOI registration agencies. Put the DOI for `Vasilevsky_2017`,
-`10.7717/peerj.3208` into the [Cross Cite DOI Citation Formatter
-service](https://citation.crosscite.org/) and select **bibtex** as the citation
-style. Copy the BibTeX code into oajournals.bib, change the long default
-citation key to `Vasilevsky_2017`, and check that the citation is now correct.
+You can fix the metadata by grabbing a .bib file from Google Scholar, PubMed, or
+Web of Science and copying the correct data into the `oajournals.bib` file.
+The reference will be corrected when you knit the document again.
 
 The citation style defaults to Chicago.  If you want a different citation
 style, you can download a csl style file from the
