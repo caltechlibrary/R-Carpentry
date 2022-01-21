@@ -29,11 +29,9 @@ class will be appropriate for you, please look over the lesson content above, or
 
 Cheat Sheets:
 
-[RStudio](https://www.rstudio.com/resources/cheatsheets/#ide)
-
-[Base R](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf)
-
-[R Markdown](https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown.pdf)
+* [RStudio](https://www.rstudio.com/resources/cheatsheets/#ide)
+* [Base R](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf)
+* [R Markdown](https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown.pdf)
 
 ### Day 2 (February 3, 11:00am - 12:00pm)
 
@@ -60,14 +58,14 @@ development environment (IDE) that makes using R easier and more interactive.
 ### If you don't have R and RStudio installed:
 
 1. Download R Version 4.1.2 from the CRAN website for your operating system:
-  * [Windows](http://cran.r-project.org/bin/windows/base/release.htm)
-  * [Mac OS](http://cran.r-project.org/bin/macosx/)
-  * [Linux](https://cloud.r-project.org/bin/linux) (Information provided to get the most recent version of R for common distributions.)
+    * [Windows](http://cran.r-project.org/bin/windows/base/release.htm)
+    * [Mac OS](http://cran.r-project.org/bin/macosx/)
+    * [Linux](https://cloud.r-project.org/bin/linux) (Information provided to get the most recent version of R for common distributions.)
 
 
 2. Open the `.exe` (Windows) or `.pkg` (Mac) just downloaded to install R. For Linux, follow the
 directions given on the website for your particular distribution.
-  * If you are a Mac user, it is also a good idea to install [XQuartz](https://www.xquartz.org/) (needed by some R packages).
+    * If you are a Mac user, it is also a good idea to install [XQuartz](https://www.xquartz.org/) (needed by some R packages).
 
 
 3. Go to the [RStudio download page](https://www.rstudio.com/products/rstudio/download/#download) and
@@ -88,16 +86,21 @@ available, quit RStudio, and download the latest version of RStudio from the
 2. To check which version of R you are using, start RStudio and check the Console window. The first line that appears in the Console indicates the version of R that is running. Alternatively, you can type `sessionInfo()`, which will also display which version of R is running.
 
 3. If you are not running R version 4.1.2, please see Steps 1 and 2 above under "If you don't have R and RStudio installed".
-  * You can [check here](https://cran.r-project.org/bin/windows/base/rw-FAQ.html#How-do-I-UNinstall-R_003f) for more information on how to remove old versions from your system if you wish to do so.
+    * You can [check here](https://cran.r-project.org/bin/windows/base/rw-FAQ.html#How-do-I-UNinstall-R_003f) for more information on how to remove old versions from your system if you wish to do so.
   
 ---
 
 ## Required Files
 
 1. Create a folder somewhere on your computer to store files associated with this workshop.
-2. Please download the following .zip file into the folder to you created in Step 1: **NEED TO INCLUDE LINK**
+2. Please download the following .zip file into the folder to you created in Step 1: [2022-02_RMarkdown.zip](https://github.com/caltechlibrary/R-Carpentry/blob/master/2022-02_RMarkdown/2022-02_RMarkdown.zip)
 3. Open/extract the .zip file you downloaded in Step 2.
-4. You should now have, within your folder **NEED TO ADD FILE INFORMATION**
+4. You should now have, within your folder:
+    * 3 folders: bin, data, fig
+    * 2 .Rmd files: RMarkdownLesson & equations-child
+    * 1 .bib file: oajournals
+    * 1 .html file: RMarkdownLesson
+  
 
 ---
 
@@ -105,4 +108,4 @@ available, quit RStudio, and download the latest version of RStudio from the
 
 The Caltech Library has [many books and ebooks on R](https://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,sso&bquery=R+programming&cli0=FT1&clv0=Y&type=1&searchMode=And&site=eds-live&scope=site&custid=s8984125&groupid=main&profile=eds), including many on the [Safari platform](https://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,sso&db=cat08655a&AN=clc.873aa4f7.3003.456e.afec.8f394b2ad7ce&site=eds-live&scope=site&custid=s8984125&groupid=main&profile=eds) (link requires Caltech credentials to view).
 
-#### Page last updated 2022-01-14
+#### Page last updated 2022-01-21
