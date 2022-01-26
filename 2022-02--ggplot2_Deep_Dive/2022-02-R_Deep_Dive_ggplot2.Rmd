@@ -153,7 +153,7 @@ each option by a comma.
 Insert chunk here :)
 
 
-## Exercise 3.3 - Using Colour to Elucidate Patterns
+## Exercise 3.3 - Using Color to Elucidate Patterns
 
 We can see from the previous plots some of the periodicity behind the periodic 
 table :) We've seen that we can change the color of an entire plot. Can we use 
@@ -162,8 +162,8 @@ according to what period they are in? We can do this by specifying an
 additional aesthetic in the main data layer using `aes()`.
 
 Add a new chunk by clicking the *Insert Chunk* button (top of the window on the 
-toolbar) or by pressing *Cmd+Option+I*.
-Recreate your graph from Exercise 3.1, but add the following to the *main data layer* aesthetics, 
+toolbar) or by pressing *Cmd+Option+I*. Recreate your graph from Exercise 3.1, 
+but add the following to the *main data layer* aesthetics, 
 after the x and y specification:
 `color=period`
 
@@ -455,8 +455,9 @@ how to customize legend colors and text.
 
 ## Exercise 6.5 - Exporting a plot
 
-Let's make one more plot based on the periodic table. Copy your plot from Exercise 
-6.4, and choose another continuous numeric variable to plot. Some choices are:
+Let's make one more plot based on the periodic table. Copy your plot from 
+Exercise 6.4, and choose another continuous numeric variable to plot. Some 
+choices are:
 
 - mass - Atomic masses
 - rcov - Covalent radii
@@ -473,16 +474,22 @@ Customize the axes and title accordingly.
 Insert chunk here :)
 
 
-Once you are happy with your plot, you can save it using the `ggsave()` command. There are other ways 
-that offer more options, but this is one of the simplest and most common. It defaults to saving the 
-last plot that was created. Run the following code to save your last plot to a jpeg file in your 
+Once you are happy with your plot, you can save it using the `ggsave()` command. 
+There are other ways that offer more options, but this is one of the simplest 
+and most common. It defaults to saving the last plot that was created. Run the 
+following code to save your last plot to a jpeg file in your 
 working directory:
 
-```{r section_6_5-ggsave_plot}
+```{r section_6_5-ggsave_plot, eval=F, results="hide"}
 ggsave("periodic_table_plot.jpeg")
 ```
 
-By default ggsave identifies the file type (or "device") based on the filename extension. You can specify a number of different file types by specifying the file type extension in your filename - i.e. ptplot.tiff, ptplot.pdf, etc. You can also specify width, height, and units of measure. More detail can be found on the [https://ggplot2.tidyverse.org/reference/ggsave.html](ggsave reference page).
+By default ggsave identifies the file type (or "device") based on the filename 
+extension. You can specify a number of different file types by specifying the 
+file type extension in your filename - i.e. periodic_table_plot.tiff, 
+periodic_table_plot.pdf, etc. You can also specify width, height, and units of 
+measure. More detail can be found on the 
+[https://ggplot2.tidyverse.org/reference/ggsave.html](ggsave reference page).
 
 
 # Acknowledgements
