@@ -31,15 +31,6 @@ this document as a PDF, slideshow, etc. It also allows for navigation via the na
 of this document window. You can navigate throughout the document using the menu.
 
 
-## Saving and previewing the notebook
-
-When you save the notebook, an HTML file containing the code and output will be saved alongside it. Click
-the *Preview* button or press *Cmd+Shift+K* to preview the HTML file - this will appear in the right hand
-side window in the *Viewer* tab. The preview shows you a rendered HTML copy of the contents of the editor.
-Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk
-when it was last run in the editor is displayed.
-
-
 # 2 - Setup
 
 This set of commands downlaods, installs and attaches packages we will need for this lesson. If you get a message asking to restart R, click Yes. If you get asked to recompile anything from a source binary, type Yes in the console. Run the code in this code chunk by following the directions given in the *How to run a code chunk* section.
