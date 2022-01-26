@@ -4,9 +4,9 @@
 
 ### Location: Online
 
-### Instructor: Kristin Briney
+### Instructor: Donna Wrublewski
 
-### Helpers: Tom Morrell, Donna Wrublewski
+### Helper(s): Kristin Briney
 
 ---
 
@@ -59,8 +59,9 @@ download the latest version of RStudio for your platform (RStudio Desktop 2021.0
 4. Open the downloaded file and install RStudio.
 
 
-5. Once it's installed, open RStudio to make sure it works and you don't get any error messages, and the Console window shows the
-correct version of R installed.
+5. Once it's installed, open RStudio to make sure it works and you don't get 
+any error messages, and the Console window shows the correct version of R 
+installed.
 
 ### If you already have R and RStudio installed:
 
@@ -77,7 +78,8 @@ available, quit RStudio, and download the latest version of RStudio from the
 
 ## Required Files
 
-1. Create a folder somewhere on your computer to store files associated with this workshop.
+1. Create a folder somewhere on your computer to store files associated with 
+this workshop.
 2. Please download the following .zip file into the folder to you created in Step 1: 
 
 (go to the webpage and click on the "Download" button on the right side of the page to download the .zip file)
@@ -101,4 +103,4 @@ The Caltech Library has [many books and ebooks on R](https://search.ebscohost.co
 
 ---
 
-#### Page last updated 2022-01-21
+#### Page last updated 2022-01-25
