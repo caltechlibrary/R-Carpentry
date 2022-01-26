@@ -112,32 +112,38 @@ window on the toolbar) or by pressing *Cmd+Option+I*. Make a scatter plot
 of density (y axis) versus [atomic] mass (x axis). Plot the data as points.
 
 Insert chunk here :)
+```{r}
+ggplot(data=periodicTable,aes(x=mass,y=density)) + geom_point()
+```
 
 
 ## Exercise 3.2 - `geom_point` Options
 
 There are many options and aesthetics that you can add to a simple scatter plot using geom_point. An extensive overview can be found in the [online ggplot2 reference](https://ggplot2.tidyverse.org/reference/geom_point.html).
 
-Let's replot our density graph with the following three additions to the `geom_point` layer, between the 
+Let's re-plot our density graph with the following three additions to the `geom_point` layer, between the 
 parentheses:
 
-1. Change the colour to red: `colour = "red"`
+1. Change the color to red: `color = "red"`
 2. Change the shape to triangles: `shape = "triangle"`
 3. Remove the missing values: `na.rm = TRUE`
 
 Add a new chunk below by clicking the *Insert Chunk* button (top of the window 
-on the toolbar) or by pressing *Cmd+Option+I*. Replot your expression from 
-Exercise 1 and add the above options to the `geom_point() layer`, separating 
+on the toolbar) or by pressing *Cmd+Option+I*. Re-plot your expression from 
+Exercise 3.1 and add the above options to the `geom_point() layer`, separating 
 each option by a comma.
 
 Insert chunk here :)
+```{r}
+ggplot(data=periodicTable,aes(x=mass,y=density)) + geom_point(color = "red",shape = "triangle",na.rm = TRUE)
+```
 
 
 ## Exercise 3.3 - Using Colour to Elucidate Patterns
 
 We can see from the previous plots some of the periodicity behind the periodic 
 table :) We've seen that we can change the color of an entire plot. Can we use 
-colour to further pick out the changes from the table by colouring the points 
+color to further pick out the changes from the table by coloring the points 
 according to what period they are in? We can do this by specifying an 
 additional aesthetic in the main data layer using `aes()`.
 
@@ -148,6 +154,10 @@ after the x and y specification:
 `color=period`
 
 Insert chunk here :)
+```{r}
+ggplot(data=periodicTable,aes(x=mass,y=density,color=period)) + geom_point()
+
+```
 
 
 ## Exercise 3.4 - Adding Color by Factor
@@ -158,28 +168,13 @@ and not a gradient. The reason it plotted period as a gradient is because in the
 color scheme. In this case, we want period to be a categorical value, or a factor. This can be done by changing
 `color=period` to `color=factor(period)`.
 
-Add a new chunk by clicking the *Insert Chunk* button (top of the window on the toolbar) or by pressing *Cmd+Option+I*. Make this modification - `color=factor(period)` - and replot. (Watch your parenthesis!)
+Add a new chunk by clicking the *Insert Chunk* button (top of the window on the toolbar) or by pressing *Cmd+Option+I*. Make this modification - `color=factor(period)` - and re-plot. (Watch your parenthesis!)
 
 Insert chunk here :)
+```{r}
+ggplot(data=periodicTable,aes(x=mass,y=density,color=factor(period))) + geom_point()
 
-Alternately, to get the same effect, you can change the data type for that column directly in the data frame. You can do that with the following command (you don't need to run this):
-
-```{r section_3_4-int_to_factor, eval=F, echo=T}
-periodicTable$period <- factor(periodicTable$period)
 ```
-
-Then, when you add `color=period`, ggplot will automatically plot it as a factor.
-
-However, if you're not sure you want to permanently change a data type, just modify it in the ggplot expression.
-
-You can change the type back to numeric with the following (also, you don't need to run this): 
-
-```{r section_3-factor_to_numeric, eval=F, echo=T}
-periodicTable$period <- as.numeric(periodicTable$period)
-```
-
-It's tricker to change it back to the original integer type, but more information on that can be found here:
-[https://stackoverflow.com/questions/3418128/how-to-convert-a-factor-to-integer-numeric-without-loss-of-information](https://stackoverflow.com/questions/3418128/how-to-convert-a-factor-to-integer-numeric-without-loss-of-information)
 
 
 # 4 - Adding a Fit
