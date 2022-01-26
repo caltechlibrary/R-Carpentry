@@ -81,7 +81,7 @@ available, quit RStudio, and download the latest version of RStudio from the
 1. Create a folder somewhere on your computer to store files associated with 
 this workshop.
 2. Please download the following .zip file into the folder to you created in Step 1: 
-
+[https://github.com/caltechlibrary/R-Carpentry/blob/master/2022-02--ggplot2_Deep_Dive/2022-02-R_Deep_Dive_ggplot2.zip](https://github.com/caltechlibrary/R-Carpentry/blob/master/2022-02--ggplot2_Deep_Dive/2022-02-R_Deep_Dive_ggplot2.zip)
 (go to the webpage and click on the "Download" button on the right side of the page to download the .zip file)
 3. Open/extract the .zip file you downloaded in Step 2.
 4. You should now have, within your folder:
