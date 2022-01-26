@@ -154,13 +154,12 @@ ggplot(data=periodicTable,aes(x=col,y=row)) + geom_tile(aes(fill=Eneg)) + scale_
 # Exercise 6.4 - Adding Axis Titles and Labels
 
 Add a new chunk by clicking the *Insert Chunk* button (top of the window on the toolbar) or by pressing *Cmd+Option+I*. Copy your plot from the previous exercise. Let's do the following:
-1. Change the X and Y axis lables to something clearer, and add a title (see exercise 5.4 for help).
-2. Tell ggplot to ignore the row with the missing data (this is the initial row with numb = 0) - see Exercise 3.2 for help. In which layer do you think the expression should go?
-3. Add a title for the legend that's a bit more descriptive than "Eneg" by adding the following layer:
+1. Change the X and Y axis labels to something clearer, and add a title (see exercise 5.4 for help).
+2. Add a title for the legend that's a bit more descriptive than "Eneg" by adding the following layer:
 + scale_fill_continuous(name="Electronegativity")
 
 ```{r exercise_6_4}
-ggplot(data=periodicTable,aes(x=col,y=row)) + geom_tile(aes(fill=Eneg), na.rm=TRUE) + scale_y_reverse(breaks=seq(1,10,1)) + scale_x_continuous(breaks=seq(1,18,1)) + scale_fill_continuous(name="Electronegativity") + labs(x="Column", y="Row", title="Electronegativity Across the Periodic Table")
+ggplot(data=periodicTable,aes(x=col,y=row)) + geom_tile(aes(fill=Eneg)) + scale_y_reverse(breaks=seq(1,10,1)) + scale_x_continuous(breaks=seq(1,18,1)) + scale_fill_continuous(name="Electronegativity") + labs(x="Column", y="Row", title="Electronegativity Across the Periodic Table")
 ```
 
 

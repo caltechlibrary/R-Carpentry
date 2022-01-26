@@ -4,45 +4,65 @@ Date: January 31, 2022 & February 1, 2022
 output:
   html_document:
     df_print: paged
+  word_document: default
 ---
 
-# 1 - Introduction - About R Notebooks
+# 1 - Introduction - About RMarkdown Documents
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook,
-the results appear beneath the code. In R Markdown documents, code is embedded in chunks, marked off by
-three back ticks and then the designation {r}. You can add additional detail about the chunk after the 'r',
-i.e. setup, information about the calculation, etc. You can also specify if you want the code itself to be
-included in any output document (the 'echo' option), and if you want any displayed results to be included
-(the 'eval' option). By default both options are set to true, so both code and output will be included in
-any output. We will use code chunks throughout this document for examples, and you will also create your
-own code chunks.
+This is an [R Markdown](http://rmarkdown.rstudio.com) document. When you 
+execute code, the results appear beneath the code. In R Markdown documents, 
+code is embedded in chunks, marked off by three back ticks and then the 
+designation {r}. You can add additional detail about the chunk after the 'r',
+i.e. setup, information about the calculation, etc. You can also specify if 
+you want the code itself to be included in any output documents (the 'echo' 
+option), and if you want any displayed results to be included (the 'eval' 
+option). By default both options are set to true, so both code and output will 
+be included in any output. We will use code chunks throughout this document for examples, and you will also create your own code chunks.
 
 
 ## How to run a code chunk
 
-To execute a code chunk, click the *Run* button within the chunk (green arrow in the top right), or put
-your cursor inside the code chunk grey window and press *Cmd+Shift+Enter*.
+To execute a code chunk, click the *Run* button within the chunk (green arrow 
+in the top right), or put your cursor inside the code chunk grey window and press *Cmd+Shift+Enter*.
 
 
 ## Document organization using Markdown
 
-You'll also notice that sections are marked off by hashmarks - #. This provides formatting when publishing
-this document as a PDF, slideshow, etc. It also allows for navigation via the navigation bar at the bottom
-of this document window. You can navigate throughout the document using the menu.
+You'll also notice that sections are marked off by hashmarks - #. This provides 
+formatting when publishing this document as a PDF, slideshow, etc. It also 
+allows for navigation via the navigation bar at the bottom of this document 
+window. You can navigate throughout the document using the menu.
 
 
 # 2 - Setup
 
-This set of commands downloads, installs and attaches packages we will need for this lesson. If you get a message asking to restart R, click Yes. If you get asked to recompile anything from a source binary, type Yes in the console. Run the code in this code chunk by following the directions given in the *How to run a code chunk* section.
+These sets of commands download, install and attach packages we will need for 
+this lesson. If you get a message asking to restart R, click Yes. If you get 
+asked to recompile anything from a source binary, type Yes in the console. Run 
+the code in these code chunks by following the directions given in the 
+*How to run a code chunk* section.
 
-```{r setup, eval=F, echo=T}
-# You can include comments in code chunks by using a hash at the beginning of the line.
+```{r setup_install, eval=F, results="hide"}
+# You can include comments in code chunks by using a hash at the beginning 
+# of the line.
+# This chunk downloads and installs packages into your R installation.
+# The options 'eval=F', results="hide", and 'echo=F' tell R to not run or 
+# display the code or results of this code when creating an output document 
+# ('knitting').
+# Kristin will talk a little more about this on Wednesday and Thursday.
 
-install.packages("tidyverse")
-install.packages("caTools")
-install.packages("bitops")
-install.packages("PeriodicTable")
-install.packages("ggplot2")
+install.packages("tidyverse", repos = "http://cran.us.r-project.org")
+install.packages("caTools", repos = "http://cran.us.r-project.org")
+install.packages("bitops", repos = "http://cran.us.r-project.org")
+install.packages("PeriodicTable", repos = "http://cran.us.r-project.org")
+install.packages("ggplot2", repos = "http://cran.us.r-project.org")
+```
+
+```{r setup_load_packages}
+# This chunk loads the packages into your current R environment.
+# This needs to be done whenever you are creating ('knitting') an output 
+# document from this file.
+
 library("tidyverse")
 library("caTools")
 library("bitops")
@@ -55,7 +75,7 @@ We will be working with a dataset from the **PeriodicTable: Periodic Table of th
 Run the code chunk below to load this dataset into the R environment.
 
 ```{r load_dataset}
-data("periodicTable")
+data(periodicTable)
 ```
 
 You should now see `periodicTable` in the Environment tab on the right side of 
@@ -112,9 +132,6 @@ window on the toolbar) or by pressing *Cmd+Option+I*. Make a scatter plot
 of density (y axis) versus [atomic] mass (x axis). Plot the data as points.
 
 Insert chunk here :)
-```{r}
-ggplot(data=periodicTable,aes(x=mass,y=density)) + geom_point()
-```
 
 
 ## Exercise 3.2 - `geom_point` Options
@@ -134,9 +151,6 @@ Exercise 3.1 and add the above options to the `geom_point() layer`, separating
 each option by a comma.
 
 Insert chunk here :)
-```{r}
-ggplot(data=periodicTable,aes(x=mass,y=density)) + geom_point(color = "red",shape = "triangle",na.rm = TRUE)
-```
 
 
 ## Exercise 3.3 - Using Colour to Elucidate Patterns
@@ -154,10 +168,6 @@ after the x and y specification:
 `color=period`
 
 Insert chunk here :)
-```{r}
-ggplot(data=periodicTable,aes(x=mass,y=density,color=period)) + geom_point()
-
-```
 
 
 ## Exercise 3.4 - Adding Color by Factor
@@ -171,15 +181,11 @@ color scheme. In this case, we want period to be a categorical value, or a facto
 Add a new chunk by clicking the *Insert Chunk* button (top of the window on the toolbar) or by pressing *Cmd+Option+I*. Make this modification - `color=factor(period)` - and re-plot. (Watch your parenthesis!)
 
 Insert chunk here :)
-```{r}
-ggplot(data=periodicTable,aes(x=mass,y=density,color=factor(period))) + geom_point()
-
-```
 
 
 # 4 - Adding a Fit
 
-Let's go back to our original graph of mass versus numb from the beginning of Section 3 (the section_3_mass_vs_numb chunk, if you are using the navigation menu at the bottom):
+Let's go back to our original graph of **mass** versus **numb** from the beginning of Section 3 (Chunk 4, the section_3_mass_vs_numb chunk, if you are using the navigation menu at the bottom):
 
 ```{r section_4-mass_vs-numb}
 ggplot(data=periodicTable,aes(x=numb,y=mass)) + geom_point()
@@ -235,7 +241,7 @@ how to get this on our plot. Believe it or not this is not as straightforward
 as one might think. Text is added to plots using an `annotate()` layer. More 
 info on `annotate()` can be found here: [https://ggplot2.tidyverse.org/reference/annotate.html](https://ggplot2.tidyverse.org/reference/annotate.html).
 
-The options for annotate() include the type of annotation (in this case 
+The options for `annotate()` include the type of annotation (in this case 
 "text"), the position on the graph (x and y values), and the value (this can be 
 a reference to a value in a vector, dataframe or list, indicated by `label=`).
 
@@ -246,10 +252,11 @@ to the plot:
 ggplot(data=periodicTable,aes(x=numb,y=mass)) + geom_point() + geom_smooth(method="lm") + annotate("text", x=10, y=200, label=intercept)
 ```
 
-Let's add the slope value to the graph now. Add a new chunk by clicking the *Insert Chunk* button 
-(top of the window on the toolbar) or by pressing *Cmd+Option+I*. Copy the code from the 
-`section_4_2-add_annotation chunk` above and add a second `annotate()` layer to add the value for 
-the slope. You may need to adjust your x and y values!
+Let's add the slope value to the graph now. Add a new chunk by clicking the 
+*Insert Chunk* button (top of the window on the toolbar) or by pressing 
+*Cmd+Option+I*. Copy the code from the `section_4_2-add_annotation chunk` above 
+and add a second `annotate()` layer to add the value for the slope. You may 
+need to adjust your x and y values!
 
 Insert chunk here :)
 
@@ -304,12 +311,13 @@ Insert chunk here :)
 
 What would make this plot look a little better?
 
-We can rotate the X-axis label text using a `theme()` layer. This layer is where all the non-content 
-(i.e. non-data) elements of ggplot graphs live. There are tons of options for themes (use help -> 
-theme), and also many pre-defined themes. 
+We can rotate the X-axis label text using a `theme()` layer. This layer is where 
+all the non-content (i.e. non-data) elements of ggplot graphs live. There are 
+tons of options for themes (use help -> theme), and also many pre-defined themes. 
 
-Let's replot our graph and make it a little easier to read. Add a new chunk by clicking the *Insert 
-Chunk* button (top of the window on the toolbar) or by pressing *Cmd+Option+I*.
+Let's re-plot our graph and make it a little easier to read. Add a new chunk by 
+clicking the *Insert Chunk* button (top of the window on the toolbar) or by 
+pressing *Cmd+Option+I*.
 To make our text a little easier to read, add the following layer to the graph:
 `+ theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5))`
 
@@ -321,33 +329,37 @@ Insert chunk here :)
 
 ## Exercise 5.3 - Assigning a Plot to an Object for Reuse
 
-Let's say you want to experiment with a few different label types, but do not want to have to re-type 
-the entire ggplot command every time you make your graph. At any point, with any number of layers, a 
-ggplot can be assigned to an object, and that object can then be called and modified with further 
-layers.
+Let's say you want to experiment with a few different label types, but do not 
+want to have to re-type the entire ggplot command every time you make your 
+graph. At any point, with any number of layers, a ggplot can be assigned to an 
+object, and that object can then be called and modified with further layers.
 
-Run the following code chunk to assign our element type plot, without label modifications, to an 
-object called `et`. The code will then display the `et` object. 
+Run the following code chunk to assign our element type plot, without label 
+modifications, to an object called `et`. The code will then display the `et` 
+object. 
 
 ```{r section_5_3-assign_plot_to_object}
 et <- ggplot(data=periodicTable) + geom_bar(mapping=aes(x=type)) + labs(x="Element Type", y="Number of Elements", title="Numbers of Elements by Type")
 et
 ```
 
-You can see now that a new object, et, is available in the Global Environment, and you can inspect 
-the additional plotting parameters that are stored in there. Why is this important? You may have a 
-situation where you will be working with the same basic plot type over and over again - this gives 
-you a programmatic way to modify aspects of the graph without retyping (or copy/pasting) the entire 
-command. In general, for reproducible analysis, using objects is highly recommended. 
+You can see now that a new object, **et**, is available in the Global 
+Environment, and you can inspectthe additional plotting parameters that are 
+stored in there. Why is this important? You may have a situation where you will 
+be working with the same basic plot type over and over again - this gives 
+you a programmatic way to modify aspects of the graph without retyping (or 
+copy/pasting) the entire command. In general, for reproducible analysis, using 
+objects is highly recommended. 
 
 Now, if we want to add a theme layer to our base et plot, we can simply run:
 `et + theme()`
 
-Add a new chunk by clicking the *Insert Chunk* button (top of the window on the toolbar) or by 
-pressing *Cmd+Option+I*. Recreate our element type plot using the et object, but rotate the X axis 
-text 45 degrees. 
+Add a new chunk by clicking the *Insert Chunk* button (top of the window on the 
+toolbar) or by pressing *Cmd+Option+I*. Recreate our element type plot using the 
+**et** object, but rotate the X axis text 45 degrees. 
 
 Insert chunk here :)
+
 
 Challenge: see if you can get the text to line up just below the X axis! What element 
 of `element_text` do you need to change?
@@ -357,26 +369,29 @@ Insert chunk here :)
 
 ## Exercise 5.4 - How Many Phases?
 
-Add a new chunk by clicking the *Insert Chunk* button (top of the window on the toolbar) or by 
-pressing *Cmd+Option+I*. Based on what we've done so far, create a bar plot that shows how many 
-elements there are of each phase. Label with an appropriate title and appropriate axes names.
+Add a new chunk by clicking the *Insert Chunk* button (top of the window on 
+the toolbar) or by pressing *Cmd+Option+I*. Based on what we've done so far, 
+create a bar plot that shows how many elements there are of each phase. Label 
+with an appropriate title and appropriate axes names.
 
 Insert chunk here :)
 
 
 # 6 - Three-Dimensional Plots: Periodic Table Trends
 
-We know that there are trends that we can see in the periodic table. This is an example of 
-three-dimensional data. We have the two dimensions of the periodic table - row and column - and 
-our third dimension is the property that varies with them. Examples of this variance can be 
-seen in ionic radius, electronegativity, etc.
+We know that there are trends that we can see in the periodic table. This is an 
+example of three-dimensional data. We have the two dimensions of the periodic 
+table - row and column - and our third dimension is the property that varies with 
+them. Examples of this variance can be seen in ionic radius, electronegativity, 
+etc.
 
-Let's make a plot of the periodic table that will show some of these trends. Run the code below to 
-create a plot of the periodic table showing variance of electronegativiy with table position. The 
-main layer creates the table, with X being the column and Y being the row. One type of 3D plot 
-is `geom_tile`, and the aesthetic that we tell it to fill with is the Eneg (electronegativity) value 
-(the "z" direction). So we should expect to see a color variance (pop quiz: what type of vector 
-is Eneg?) with position in X and Y.
+Let's make a plot of the periodic table that will show some of these trends. Run 
+the code below to create a plot of the periodic table showing variance of 
+electronegativiy with table position. The main layer creates the table, with X 
+being the column and Y being the row. One type of 3D plot is `geom_tile`, and the 
+aesthetic that we tell it to fill with is the Eneg (electronegativity) value 
+(the "z" direction). So we should expect to see a color variance (pop quiz: what 
+type of vector is Eneg?) with position in X and Y.
 
 ```{r 6-electronegativity_map}
 ggplot(data=periodicTable,aes(x=col,y=row)) + geom_tile(aes(fill=Eneg))
@@ -387,11 +402,13 @@ ggplot(data=periodicTable,aes(x=col,y=row)) + geom_tile(aes(fill=Eneg))
 
 So this looks close - what do we need to do to fix this?
 
-Let's start by flipping the Y-axis. Add a new chunk by clicking the *Insert Chunk* button (top of the 
-window on the toolbar) or by pressing *Cmd+Option+I*. Add the following line:
-`+ scale_y_reverse`
+Let's start by flipping the Y-axis. Add a new chunk by clicking the 
+*Insert Chunk* button (top of the window on the toolbar) or by pressing 
+*Cmd+Option+I*. Add the following line:
+`+ scale_y_reverse()`
 
 Insert chunk here :)
+
 
 Looks better!
 
@@ -415,29 +432,31 @@ How can we do the same thing for the Y axis? Add a new chunk by clicking the *In
 Insert chunk here :)
 
 
+Note that ggplot automatically removes missing data!
+
+
 ## Exercise 6.4 - Adding Axis Titles and Labels
 
 Add a new chunk by clicking the *Insert Chunk* button (top of the window on the toolbar) or by 
 pressing *Cmd+Option+I*. Copy your plot from the previous exercise. Let's do the following:
-1. Change the X and Y axis lables to something clearer, and add a title (see Exercise 5.1 for help).
-2. Tell ggplot to ignore the row with the missing data (this is the initial row with numb = 0) - see 
-Exercise 3.2 for help. In which layer do you think the expression should go?
-3. Add a title for the legend that's a bit more descriptive than "Eneg" by adding the following layer:
+1. Change the X and Y axis labels to something clearer, and add a title (see Exercise 5.1 for help).
+2. Add a title for the legend that's a bit more descriptive than "Eneg" by adding the following layer:
 `+ scale_fill_continuous(name="Electronegativity")`
 
 Insert chunk here :)
 
-The `scale_fill_continuous() layer` is how you customize the legend and colour for continuous data - 
-in this case, our electronegativity values. There are different options if you have manually assigned 
-or discrete data - see [http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/](here) for more info on 
+
+The `scale_fill_continuous() layer` is how you customize the legend and color 
+for continuous data - in this case, our electronegativity values. There are 
+different options if you have manually assigned or discrete data - see 
+[http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/](here) for more info on 
 how to customize legend colors and text.
 
 
 ## Exercise 6.5 - Exporting a plot
 
-Let's make one more plot based on the periodic table. Add a new chunk by clicking the *Insert Chunk* 
-button (top of the window on the toolbar) or by pressing *Cmd+Option+I*. Copy your plot from Exercise 
-6.4, and choose another continuous numberic variable to plot. Some choices are:
+Let's make one more plot based on the periodic table. Copy your plot from Exercise 
+6.4, and choose another continuous numeric variable to plot. Some choices are:
 
 - mass - Atomic masses
 - rcov - Covalent radii
@@ -451,13 +470,16 @@ button (top of the window on the toolbar) or by pressing *Cmd+Option+I*. Copy yo
 
 Customize the axes and title accordingly.
 
+Insert chunk here :)
+
+
 Once you are happy with your plot, you can save it using the `ggsave()` command. There are other ways 
 that offer more options, but this is one of the simplest and most common. It defaults to saving the 
 last plot that was created. Run the following code to save your last plot to a jpeg file in your 
 working directory:
 
 ```{r section_6_5-ggsave_plot}
-ggsave("ptplot.jpeg")
+ggsave("periodic_table_plot.jpeg")
 ```
 
 By default ggsave identifies the file type (or "device") based on the filename extension. You can specify a number of different file types by specifying the file type extension in your filename - i.e. ptplot.tiff, ptplot.pdf, etc. You can also specify width, height, and units of measure. More detail can be found on the [https://ggplot2.tidyverse.org/reference/ggsave.html](ggsave reference page).
@@ -465,19 +487,20 @@ By default ggsave identifies the file type (or "device") based on the filename e
 
 # Acknowledgements
 
-Gail Clement, Head of Research Services, California Institute of Technology, for inspiration and 
-assistance with proofreading and teaching.
+Gail Clement, Head of Research Services, California Institute of Technology, 
+for inspiration and assistance with proofreading and teaching.
 
-Parts of this lesson are inspired by *Data Science in the tidyverse* by Charlotte Wickham, which is 
-licensed under a Creative Commons Attribution 4.0 International License and based on a work at [https://github.com/rstudio/master-the-tidyverse](https://github.com/rstudio/master-the-tidyverse).
+Parts of this lesson are inspired by *Data Science in the tidyverse* by 
+Charlotte Wickham, which is licensed under a Creative Commons Attribution 4.0 
+International License and based on a work at [https://github.com/rstudio/master-the-tidyverse](https://github.com/rstudio/master-the-tidyverse).
 
 
 # References
 
-1. More information can always be found in the help!
+1. More information can always be found in the package help!
 2. [https://ggplot2.tidyverse.org/reference/](Main ggplot2 reference)
-3. ggplot2: Elegant Graphics for Data Analysis, 2nd Ed., by Hadley Wickham: [https://github.com/hadley/ggplot2-book](https://github.com/hadley/ggplot2-book)
+3. ggplot2: Elegant Graphics for Data Analysis, 3nd Ed. (in progress), by Hadley Wickham: [https://ggplot2-book.org/](https://ggplot2-book.org/)
 4. R for Data Science by Hadley Wickham, [http://r4ds.had.co.nz/data-visualisation.html](Chapter 3: Data Visualization)
 5. [https://groups.google.com/forum/#!forum/ggplot2](ggplot2 Google Group)
-6. ggplot2 cheatsheet (2016): [https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf)
-7. [https://www.computerworld.com/article/2935394/business-intelligence/my-ggplot2-cheat-sheet-search-by-task.html](ggplot2 Cheat Sheet - Sharon Machlis)
+6. ggplot2 cheatsheet (2021-08): [https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf)
+7. [https://www.computerworld.com/article/2935394/business-intelligence/my-ggplot2-cheat-sheet-search-by-task.html](ggplot2 Cheat Sheet (2015) - Sharon Machlis)
