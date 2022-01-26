@@ -85,7 +85,8 @@ this workshop.
 (go to the webpage and click on the "Download" button on the right side of the page to download the .zip file)
 3. Open/extract the .zip file you downloaded in Step 2.
 4. You should now have, within your folder:
-    * 
+    * 2022-02-R_Deep_Dive_ggplot2.Rmd
+    * 2022-02-R_Deep_Dive_ggplot2-answers.Rmd
 
 ---
 
