@@ -5,3 +5,181 @@ output:
   html_document:
     df_print: paged
 ---
+
+# Exercise 3.1 - Finding A Pattern
+
+Make a scatter plot of density (y axis) versus atomic mass (x axis). Plot the data as points.
+
+```{r exercise_3_1}
+ggplot(data=periodicTable,aes(x=mass,y=density)) + geom_point()
+```
+
+
+# Exercise 3.2 - geom_point options
+
+Let's replot our density graph with the following three additions to the geom_point layer:
+
+1. Change the colour to red: colour = "red"
+2. Change the shape to triangles: shape = "triangle"
+3. Remove the missing values: na.rm = TRUE
+
+Replot your expression from Exercise 1 and add the above options to the geom_point() layer, separating each option by a comma.
+
+```{r exercise_3_2}
+ggplot(data=periodicTable,aes(x=mass,y=density)) + geom_point(colour="red",shape="triangle",na.rm=TRUE)
+```
+
+
+# Exercise 3.3 - Using colour to elucidate patterns
+
+Recreate your graph from Exercise 1, but add the following to the *main data layer* aesthetics, after the x and y specification:
+color=period
+
+```{r exercise_3_3}
+# Remove this for the learner version.
+ggplot(data=periodicTable,aes(x=mass,y=density,color=period)) + geom_point()
+```
+
+
+# Exercise 3.4 - Adding Color by Factor
+
+Make this modification - color=factor(period) - and replot. (Watch your parenthesis!)
+
+```{r exercise_3_4}
+ggplot(data=periodicTable,aes(x=mass,y=density,color=factor(period))) + geom_point()
+```
+
+
+# Exercise 4.1 - Adding a linear fit
+
+Add a new chunk by clicking the *Insert Chunk* button (top of the window on the toolbar) or by pressing *Cmd+Option+I*. Add the following layer to our mass versus numb plot above:
+geom_smooth(method="lm")
+
+```{r exercise_4_1}
+ggplot(data=periodicTable,aes(x=numb,y=mass)) + geom_point() + geom_smooth(method="lm")
+```
+
+
+# Exercise 4.2 - Adding linear fit parameters to the plot
+
+Copy the code from the add_annotation chunk above and add a second annotate() layer to add the value for the slope. You may need to adjust your x and y values!
+
+```{r exercise_4_2}
+ggplot(data=periodicTable,aes(x=numb,y=mass)) + geom_point() + geom_smooth(method="lm") + annotate("text", x=10, y=200, label=intercept) + annotate("text", x=10, y=150, label=slope)
+```
+
+# Exercise 4.3 - Customizing annotations
+
+Copy the code from the label_using_paste chunk above and change the annotate layer so the equation y = slope*x + intercept shows up on the graph.
+
+```{r exercise_4_3}
+ggplot(data=periodicTable,aes(x=numb,y=mass)) + geom_point() + geom_smooth(method="lm") + annotate("text", x=30, y=250, label=paste("y = ", slope, "x +", intercept))
+```
+
+
+# Exercise 5.1 - Customizing Axes Text
+
+Recreate the graph from Exercise 4 and label the X-axis "Element Type", Y-axis "Number of Elements", and the plot title "Numbers of Elements by Type". 
+
+```{r exercise_5_1}
+ggplot(data=periodicTable) + geom_bar(mapping=aes(x=type)) + labs(x="Element Type", y="Number of Elements", title="Numbers of Elements by Type")
+```
+
+
+# Exercise 5.2 - Customizing Axes Position
+
+To make our text a little easier to read, add the following layer to the graph:
+
++ theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5))
+
+The 'element_text' command will change the 'angle', 'hjust' (horizontal justification/position) and 'vjust' (vertical justification/position) for the text of the X axis element (axis.text.x).
+
+```{r exercise_5_2}
+ggplot(data=periodicTable) + geom_bar(mapping=aes(x=type)) + labs(x="Element Type", y="Number of Elements", title="Numbers of Elements by Type") + theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5))
+```
+
+# Exercise 5.3 - Assigning a Plot to an Object for Reuse
+
+Recreate our element type plot using the et object, but rotate the X axis text 45 degrees. 
+
+```{r exercise_5_3}
+et + theme(axis.text.x=element_text(angle=45,hjust=1,vjust=0.5))
+```
+
+Challenge: see if you can get the text to line up just below the X axis! What element of element_text do you need to change?
+
+```{r exercise_5_3_challenge}
+et + theme(axis.text.x=element_text(angle=45,hjust=1,vjust=1))
+```
+
+
+# Exercise 5.4 - How Many Phases?
+
+Based on what we've done so far, create a bar plot that shows how many elements there are of each phase. Label with an appropriate title and appropriate axes names.
+
+```{r exercise_5_4}
+ggplot(data=periodicTable) + geom_bar(mapping=aes(x=phase)) + labs(x="Element Phase", y="Number of Elements", title="Numbers of Elements by Phase")
+```
+
+
+# Exercise 6.1 - Manipulating Axes
+
+Add the following line:
++ scale_y_reverse
+
+```{r exercise_6_1}
+ggplot(data=periodicTable,aes(x=col,y=row)) + geom_tile(aes(fill=Eneg)) + scale_y_reverse()
+```
+
+
+# Exercise 6.2 - Customizing Ticks and Labels 1
+
+Copy your code from the previous exercise and add the following line to modify the X axis:
++ scale_x_continuous(breaks=seq(1,18,1))
+
+```{r exercise_6_2}
+ggplot(data=periodicTable,aes(x=col,y=row)) + geom_tile(aes(fill=Eneg)) + scale_y_reverse() + scale_x_continuous(breaks=seq(1,18,1))
+```
+
+
+# Exercise 6.3 - Customizing Ticks and Labels 2
+
+What option can we add to scale_y_reverse() to get the row numbers listed individually?
+
+```{r exercise_6_3}
+ggplot(data=periodicTable,aes(x=col,y=row)) + geom_tile(aes(fill=Eneg)) + scale_y_reverse(breaks=seq(1,10,1)) + scale_x_continuous(breaks=seq(1,18,1)) 
+```
+
+
+# Exercise 6.4 - Adding Axis Titles and Labels
+
+Add a new chunk by clicking the *Insert Chunk* button (top of the window on the toolbar) or by pressing *Cmd+Option+I*. Copy your plot from the previous exercise. Let's do the following:
+1. Change the X and Y axis lables to something clearer, and add a title (see exercise 5.4 for help).
+2. Tell ggplot to ignore the row with the missing data (this is the initial row with numb = 0) - see Exercise 3.2 for help. In which layer do you think the expression should go?
+3. Add a title for the legend that's a bit more descriptive than "Eneg" by adding the following layer:
++ scale_fill_continuous(name="Electronegativity")
+
+```{r exercise_6_4}
+ggplot(data=periodicTable,aes(x=col,y=row)) + geom_tile(aes(fill=Eneg), na.rm=TRUE) + scale_y_reverse(breaks=seq(1,10,1)) + scale_x_continuous(breaks=seq(1,18,1)) + scale_fill_continuous(name="Electronegativity") + labs(x="Column", y="Row", title="Electronegativity Across the Periodic Table")
+```
+
+
+# Exercise 6.5 - Exporting a plot
+
+Copy your plot from Exercise 6.4, and choose another continuous numeric variable to plot. Some choices are:
+
+- mass - Atomic masses
+- rcov - Covalent radii
+- rvdw - Van der Waals radii
+- rion - Ionic radii
+- IP - First ionization potential
+- density
+- melting - Melting points
+- boiling - Boiling points
+- C - Heat capacities
+
+Customize the axes and title accordingly.
+
+```{r exercise_6_5}
+ggplot(data=periodicTable,aes(x=col,y=row)) + geom_tile(aes(fill=rion), na.rm=TRUE) + scale_y_reverse(breaks=seq(1,10,1)) + scale_x_continuous(breaks=seq(1,18,1)) + scale_fill_continuous(name="Ionic Radius") + labs(x="Column", y="Row", title="Ionic Radius Across the Periodic Table")
+```
