@@ -1,6 +1,6 @@
 ---
 title: "R Deep Dive with ggplot2"
-Date: July 19, 2019
+Date: January 31, 2022 & February 1, 2022
 output:
   html_document:
     df_print: paged
@@ -33,12 +33,10 @@ of this document window. You can navigate throughout the document using the menu
 
 # 2 - Setup
 
-This set of commands downlaods, installs and attaches packages we will need for this lesson. If you get a message asking to restart R, click Yes. If you get asked to recompile anything from a source binary, type Yes in the console. Run the code in this code chunk by following the directions given in the *How to run a code chunk* section.
+This set of commands downloads, installs and attaches packages we will need for this lesson. If you get a message asking to restart R, click Yes. If you get asked to recompile anything from a source binary, type Yes in the console. Run the code in this code chunk by following the directions given in the *How to run a code chunk* section.
 
 ```{r setup, eval=F, echo=T}
 # You can include comments in code chunks by using a hash at the beginning of the line.
-# For this chunk, I set eval=F so you don't get all the package loading messages cluttering up your HTML
-# output.
 
 install.packages("tidyverse")
 install.packages("caTools")
@@ -70,16 +68,19 @@ characteristics of our data frame.
 str(periodicTable)
 ```
 
-In the Environment tab, clicking on the arrow in the blue circle will display 
-the same basic information (the "`str`ucture") about this data frame. If we 
-want to look at all the data in a table format, click on the **name** of 
-the data frame in the Environment tab. This will open up a new object tab in 
-the upper left, next to this window.
+In the Environment tab, clicking on the arrow in the blue circle will
+display the same basic information (the "`str`ucture") about this data
+frame. If we want to look at all the data in a table format, click on the
+**name** of the data frame in the Environment tab. This will open up a new 
+object tab in the upper left, next to this window.
 
 
 # 3 - Simple Scatter Plot
 
-There's lots of data that we can play with here. Let's start by making a simple plot of atomic mass versus atomic number to check the integrity of our data. What should this plot look like? Run the code below to generate a graph.
+There's lots of data that we can play with here. Let's start by making a 
+simple plot of atomic mass versus atomic number to check the integrity of 
+our data. What should this plot look like? Run the code below to generate a 
+graph.
 
 ```{r section_3_mass_vs_numb}
 ggplot(data=periodicTable, aes(x=numb,y=mass)) + geom_point()
@@ -87,22 +88,28 @@ ggplot(data=periodicTable, aes(x=numb,y=mass)) + geom_point()
 
 This is an example of the most basic of ggplots. It has three key elements:
 
-1. `data=`: the data you are plotting (usually the name of your data frame in your environment)
+1. `data=`: the data you are plotting (usually the name of your data frame 
+in your environment)
 
-2. `aes()`: these are the **`aes`thetic** mappings for the plot - how we are visually representing the data
-variables. The basic ones used here are:
+2. `aes()`: these are the **`aes`thetic** mappings for the plot - how we 
+are visually representing the data variables. The basic ones used here are:
 + what data to plot on the x axis (`x=vector_in_dataframe`)
 + what data to plot on the y axis (`y=vector_in_dataframe`)
 
-3. An additional layer, signified by the `+` symbol, called `geom` to describe what the plotted data should look
-like (in this case, what symbol should be used for the scatterplot). 
+3. An additional **layer**, signified by the `+` symbol, called `geom` to 
+describe what the plotted data should look like (in this case, what symbol 
+should be used for the scatterplot). 
 
-In this case, we are using the periodicTable dataframe, and plotting numb on x and mass on y. We are specifiying the data be represented as individual points.
+In this case, we are using the **periodicTable** dataframe, and plotting 
+**numb** on x and **mass** on y. We are specifying the data be represented 
+as individual points (`geom_point`).
 
 
 ## Exercise 3.1 - Finding A Pattern
 
-Add a new chunk below by clicking the *Insert Chunk* button (top of the window on the toolbar) or by pressing *Cmd+Option+I*. Make a scatter plot of density (y axis) versus [atomic] mass (x axis). Plot the data as points.
+Add a new chunk below by clicking the *Insert Chunk* button (top of the 
+window on the toolbar) or by pressing *Cmd+Option+I*. Make a scatter plot 
+of density (y axis) versus [atomic] mass (x axis). Plot the data as points.
 
 Insert chunk here :)
 

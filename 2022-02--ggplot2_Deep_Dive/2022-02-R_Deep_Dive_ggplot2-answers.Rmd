@@ -1,0 +1,7 @@
+---
+title: "R Deep Dive with ggplot2 - Exercise Answers"
+Date: January 31, 2022 & February 1, 2022
+output:
+  html_document:
+    df_print: paged
+---
