@@ -30,7 +30,7 @@ class will be appropriate for you, please look over the lesson content above, or
 Cheat Sheets:
 
 * [RStudio](https://www.rstudio.com/resources/cheatsheets/#ide)
-* [Base R](http://github.com/rstudio/cheatsheets/blob/main/base-r.pdf)
+* [Base R](https://github.com/rstudio/cheatsheets/raw/main/base-r.pdf)
 * [R Markdown](https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown.pdf)
 
 ### Day 2 (February 3, 11:00am - 12:00pm)
