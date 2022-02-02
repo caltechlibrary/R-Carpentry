@@ -93,7 +93,7 @@ available, quit RStudio, and download the latest version of RStudio from the
 ## Required Files
 
 1. Create a folder somewhere on your computer to store files associated with this workshop.
-2. Please download the following .zip file into the folder to you created in Step 1: [2022-02_RMarkdown.zip](https://github.com/caltechlibrary/R-Carpentry/blob/master/2022-02_RMarkdown/2022-02_RMarkdown.zip) (go to the webpage and click on the "Download" button on the right side of the page to download the .zip file)
+2. Please download the following .zip file into the folder to you created in Step 1: [2022-02_RMarkdown.zip](https://caltechlibrary.github.io/R-Carpentry/2022-02_RMarkdown/2022-02_RMarkdown.zip) 
 3. Open/extract the .zip file you downloaded in Step 2.
 4. You should now have, within your folder:
     * 3 folders: bin, data, fig
